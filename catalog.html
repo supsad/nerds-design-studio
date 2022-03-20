@@ -40,7 +40,72 @@
   </header>
 
   <main>
+    <h1>Магазин готовых шаблонов</h1>
 
+    <section>
+      <h2>Фильтры</h2>
+
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Стоимость:</legend>
+
+          <p>
+            <label for="price-range">Диапазон стоимости</label>
+            <input type="range" name="price" id="price-range" min="0" max="200000" step="10000" value="0, 150000" multiple>
+          </p>
+
+          <label for="price-from">От</label>
+          <input type="number" id="price-from" name="price-from" value="0">
+
+          <label for="price-to">До</label>
+          <input type="number" id="price-to" name="price-to" value="150000">
+        </fieldset>
+
+        <fieldset>
+          <legend>Сетка:</legend>
+
+          <label>
+            <input type="radio" name="layout" id="layout-adaptive" value="adaptive" checked>
+            Адаптивная
+          </label>
+          <label>
+            <input type="radio" name="layout" id="layout-fixed" value="fixed">
+            Фиксированная
+          </label>
+          <label>
+            <input type="radio" name="layout" id="layout-rubber" value="rubber">
+            Резиновая
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Особенности:</legend>
+
+          <label>
+            <input type="checkbox" name="slider" id="features-slider" checked>
+            Слайдер
+          </label>
+          <label>
+            <input type="checkbox" name="advantage" id="features-advantage">
+            Блок преимуществ
+          </label>
+          <label>
+            <input type="checkbox" name="news" id="features-news" checked>
+            Новости
+          </label>
+          <label>
+            <input type="checkbox" name="gallery" id="features-galerry">
+            Галерея
+          </label>
+          <label>
+            <input type="checkbox" name="bag" id="features-bag">
+            Корзина
+          </label>
+        </fieldset>
+
+        <button type="submit">Показать</button>
+      </form>
+    </section>
   </main>
 
   <footer>
