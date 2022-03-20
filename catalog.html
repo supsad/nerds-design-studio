@@ -51,7 +51,8 @@
 
           <p>
             <label for="price-range">Диапазон стоимости</label>
-            <input type="range" name="price" id="price-range" min="0" max="200000" step="10000" value="0, 150000" multiple>
+            <input type="range" name="price" id="price-range" min="0" max="200000"
+                   step="10000" value="0, 150000" multiple>
           </p>
 
           <label for="price-from">От</label>
@@ -63,44 +64,63 @@
 
         <fieldset>
           <legend>Сетка:</legend>
-
-          <label>
-            <input type="radio" name="layout" id="layout-adaptive" value="adaptive" checked>
-            Адаптивная
-          </label>
-          <label>
-            <input type="radio" name="layout" id="layout-fixed" value="fixed">
-            Фиксированная
-          </label>
-          <label>
-            <input type="radio" name="layout" id="layout-rubber" value="rubber">
-            Резиновая
-          </label>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="layout" id="layout-adaptive" value="adaptive" checked>
+                Адаптивная
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="layout" id="layout-fixed" value="fixed">
+                Фиксированная
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="layout" id="layout-rubber" value="rubber">
+                Резиновая
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
         <fieldset>
           <legend>Особенности:</legend>
 
-          <label>
-            <input type="checkbox" name="slider" id="features-slider" checked>
-            Слайдер
-          </label>
-          <label>
-            <input type="checkbox" name="advantage" id="features-advantage">
-            Блок преимуществ
-          </label>
-          <label>
-            <input type="checkbox" name="news" id="features-news" checked>
-            Новости
-          </label>
-          <label>
-            <input type="checkbox" name="gallery" id="features-galerry">
-            Галерея
-          </label>
-          <label>
-            <input type="checkbox" name="bag" id="features-bag">
-            Корзина
-          </label>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="slider" id="features-slider" checked>
+                Слайдер
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="advantage" id="features-advantage">
+                Блок преимуществ
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="news" id="features-news" checked>
+                Новости
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="gallery" id="features-galerry">
+                Галерея
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="bag" id="features-bag">
+                Корзина
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
         <button type="submit">Показать</button>
@@ -113,12 +133,26 @@
       <p>Сортировать:</p>
 
       <form action="https://echo.htmlacademy.ru" method="get">
-        <button type="button" name="sort-list">По цене</button>
-        <button type="button" name="sort-list">По типу</button>
-        <button type="button" name="sort-list">По названию</button>
+        <ul>
+          <li>
+            <button type="button" name="sort-list">По цене</button>
+          </li>
+          <li>
+            <button type="button" name="sort-list">По типу</button>
+          </li>
+          <li>
+            <button type="button" name="sort-list">По названию</button>
+          </li>
+        </ul>
 
-        <button type="button" name="sort-list-decrease">По убыванию</button>
-        <button type="button" name="sort-list-increase">По возрастанию</button>
+        <ul>
+          <li>
+            <button type="button" name="sort-list-decrease">По убыванию</button>
+          </li>
+          <li>
+            <button type="button" name="sort-list-increase">По возрастанию</button>
+          </li>
+        </ul>
       </form>
     </section>
 
@@ -135,16 +169,12 @@
           </a>
 
           <div>
-            <dl>
-              <dt>Sedona</dt>
-              <dd>
+              <h3>Sedona</h3>
+              <p>
                 Информационный сайт <br>
                 для туристов
-              </dd>
-            </dl>
-            <p>
+              </p>
               <a href="blank.html">9 900 Р</a>
-            </p>
           </div>
         </li>
 
@@ -157,16 +187,12 @@
           </a>
 
           <div>
-            <dl>
-              <dt>Pink App</dt>
-              <dd>
+              <h3>Pink App</h3>
+              <p>
                 Продуктовый лендинг <br>
                 приложения для iOS и Android
-              </dd>
-            </dl>
-            <p>
+              </p>
               <a href="blank.html">9 900 Р</a>
-            </p>
           </div>
         </li>
 
@@ -180,16 +206,12 @@
           </a>
 
           <div>
-            <dl>
-              <dt>Barbershop</dt>
-              <dd>
+              <h3>Barbershop</h3>
+              <p>
                 Сайт салона красоты. <br>
                 Для мужчин, да.
-              </dd>
-            </dl>
-            <p>
+              </p>
               <a href="blank.html">9 900 Р</a>
-            </p>
           </div>
         </li>
 
@@ -202,16 +224,12 @@
           </a>
 
           <div>
-            <dl>
-              <dt>MISHKA</dt>
-              <dd>
+              <h3>MISHKA</h3>
+              <p>
                 Интернет-магазин <br>
                 вязаных игрушек
-              </dd>
-            </dl>
-            <p>
+              </p>
               <a href="blank.html">9 900 Р</a>
-            </p>
           </div>
         </li>
 
@@ -224,16 +242,12 @@
           </a>
 
           <div>
-            <dl>
-              <dt>A Plus</dt>
-              <dd>
+              <h3>A Plus</h3>
+              <p>
                 Лендинг курсов повышения <br>
                 квалификации
-              </dd>
-            </dl>
-            <p>
+              </p>
               <a href="blank.html">9 900 Р</a>
-            </p>
           </div>
         </li>
 
@@ -246,16 +260,12 @@
           </a>
 
           <div>
-            <dl>
-              <dt>КВАСТ</dt>
-              <dd>
+              <h3>КВАСТ</h3>
+              <p>
                 Промо-сайт производителя <br>
                 крафтового кваса
-              </dd>
-            </dl>
-            <p>
+              </p>
               <a href="blank.html">9 900 Р</a>
-            </p>
           </div>
         </li>
       </ul>
