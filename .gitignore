@@ -16,3 +16,7 @@ source-img/
 
 #My files
 README
+
+#configs
+.editorconfig
+.gitattributes
