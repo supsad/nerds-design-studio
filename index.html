@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Дизайн-студия "Нёрдс"</title>
+<head>
+  <meta charset="utf-8">
+  <title>Дизайн-студия "Нёрдс"</title>
 
-    <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/normalize.css">
 
-    <link rel="icon" href="favicon.ico"><!-- 32x32 -->
-    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
-    <link rel="manifest" href="manifest.webmanifest">
-  </head>
+  <link rel="icon" href="favicon.ico"><!-- 32x32 -->
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
 
 <body>
-  <header>
-    <a>
+  <header class="main-header">
+    <a class="logo header__logo">
       <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Логотип Нёрдс">
     </a>
-    <nav>
-      <ul>
-        <li>
+    <nav class="main-navigation main-header__main-navigation">
+      <ul class="main-navigation__link">
+        <li class="main-navigation__link-item">
           <!-- Сделать якорь -->
           <a href="blank.html">
             Студия
           </a>
         </li>
-        <li>
+        <li class="main-navigation__link-item">
           <!-- Сделать якорь -->
           <a href="blank.html">
             Клиенты
           </a>
         </li>
-        <li>
+        <li class="main-navigation__link-item">
           <a href="catalog.html">
             Магазин
           </a>
         </li>
-        <li>
+        <li class="main-navigation__link-item">
           <!-- Сделать якорь -->
           <a href="blank.html">
             Контакты
           </a>
         </li>
       </ul>
-      <a href="blank.html">Корзина</a>
+      <a class="main-header__cart-bug cart-bug" href="blank.html">Корзина</a>
     </nav>
   </header>
 
-  <main>
+  <main class="wrapper">
     <h1>Дизайн-студия Нёрдс</h1>
 
-    <section>
+    <section class="presentation">
       <h2>Наша идеология</h2>
 
-      <div>
+      <div class="slider-first presentation__slider-first">
         <p>
           Долго, дорого, <br>
           скрупулёзно.
@@ -64,13 +64,13 @@
         </p>
         <a href="blank.html">Узнать больше</a>
 
-        <figure>
+        <figure class="slide-first">
           <img src="img/slider/index-smartphones-opti.png" width="760" height="431"
                alt="Телефоны с одним из наших приложений">
         </figure>
       </div>
 
-      <div>
+      <div class="slider-second presentation__slider-second">
         <p>
           Любим математику <br>
           как никто другой
@@ -81,13 +81,13 @@
         </p>
         <a href="blank.html">Узнать больше</a>
 
-        <figure>
+        <figure class="slide-second">
           <img src="img/slider/index_monoblocks-opti.png" width="760" height="431"
                alt="Моноблок с одним из наших предложений">
         </figure>
       </div>
 
-      <div>
+      <div class="slider-third presentation__slider-third">
         <p>
           Только ночь, <br>
           только хардкор
@@ -98,7 +98,7 @@
         </p>
         <a href="blank.html">Узнать больше</a>
 
-        <figure>
+        <figure class="slide-third">
           <img src="img/slider/index-tablet-opti.png" width="760" height="431"
                alt="Планшет и смартфон с одним из наших приложений">
         </figure>
@@ -109,7 +109,7 @@
       <button type="button">3 слайд</button>
     </section>
 
-    <section>
+    <section class="services">
       <h2>Услуги</h2>
 
       <ul>
