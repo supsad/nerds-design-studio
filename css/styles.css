@@ -280,4 +280,37 @@ body {
 
 /* Map */
 
+.map {
+  background-color: #E0E0E0;
+}
+
 /* Social */
+
+.social-media__item {
+  list-style: none;
+}
+
+.social-media__ref {
+  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+}
+
+.social-media__ref:hover {
+  background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
+}
+
+.social-media__ref:active {
+  background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+}
+
+.social-discount__heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.social-discount__description {
+  font-size: 16px;
+  line-height: 22px;
+  color: #444;
+}
