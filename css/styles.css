@@ -28,14 +28,29 @@
 
 /* Color */
  :root {
-  --basic-white: #fff;
-  --basic-grey: #eee;
-  --accent-color: #FB565A;
-  --basic-green: #00CA74;
-  --basic-yellow: #EFC849;
+   --basic-black: #000;
+  --basic-white: #FFF;
+  --basic-grey: #EEE;
+  --accent-red: #FB565A;
+  --accent-green: #00CA74;
+  --accent-yellow: #EFC849;
   --light-grey: #E1E1E1;
   --extra-grey: #4D4D4D;
-  --description-color: #283136;
+  --description-grey: #283136;
+
+   --empty-light-grey: #E0E0E0;
+   --contacts-light-grey: #666;
+   --social-extra-grey: #444;
+
+   --accent-red-hover: #E74246;
+   --accent-green-hover: #00BC6C;
+   --accent-yellow-hover: #EAB534;
+   --accent-red-active: #D7373B;
+   --accent-green-active: #00AA62;
+   --accent-yellow-active: #E5A722;
+
+   --box-shadow-active: rgba(0, 1, 1, 0.1);
+   --text-button-active: rgba(255, 255, 255, 30%);
 }
 
 /* Standard */
@@ -49,13 +64,13 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #000;
+  color: var(--basic-black);
 }
 
 /* Button */
 
 .button {
-  background-color: var(--accent-color);
+  background-color: var(--accent-red);
 
   text-transform: uppercase;
   font-weight: 500;
@@ -67,13 +82,13 @@ body {
 }
 
 .button:hover {
-  background-color: #E74246;
+  background-color: var(--accent-red-hover);
 }
 
 .button:active {
-  background-color: #D7373B;
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
-  color: rgba(255, 255, 255, 30%);
+  background-color: var(--accent-red-active);
+  box-shadow: inset 0 3px 0 var(--box-shadow-active);
+  color: var(--text-button-active);
 }
 
 /* Header */
@@ -92,7 +107,7 @@ body {
 
 .page-navigation__ref ,
 .page-header__cart-bug {
-  color: #000;
+  color: var(--basic-black);
   text-decoration: none;
 }
 
@@ -102,7 +117,7 @@ body {
 
 .page-navigation__ref:hover ,
 .page-header__cart-bug:hover {
-  color: var(--accent-color);
+  color: var(--accent-red);
 }
 
 .page-header__logo:active ,
@@ -126,13 +141,13 @@ body {
 }
 
 .slider__description {
-  color: var(--description-color);
+  color: var(--description-grey);
 }
 
 .slide-first ,
 .slide-second ,
 .slide-third {
-  background-color: #E0E0E0;
+  background-color: var(--empty-light-grey);
 }
 
 /* Services */
@@ -142,7 +157,7 @@ body {
 }
 
 .services__img {
-  background-color: var(--accent-color);
+  background-color: var(--accent-red);
 }
 
 .services__heading {
@@ -152,33 +167,33 @@ body {
 }
 
 .services__description {
-  color: var(--description-color);
+  color: var(--description-grey);
 }
 
 .services__img_green ,
 .services__button_green {
-  background-color: var(--basic-green);
+  background-color: var(--accent-green);
 }
 
 .services__img_yellow ,
 .services__button_yellow {
-  background-color: var(--basic-yellow);
+  background-color: var(--accent-yellow);
 }
 
 .services__button_green:hover {
-  background-color: #00BC6C;
+  background-color: var(--accent-green-hover);
 }
 
 .services__button_green:active {
-  background-color: #00AA62;
+  background-color: var(--accent-green-active);
 }
 
 .services__button_yellow:hover {
-  background-color: #EAB534;
+  background-color: var(--accent-yellow-hover);
 }
 
 .services__button_yellow:active {
-  background-color: #E5A722;
+  background-color: var(--accent-yellow-active);
 }
 
 /* About */
@@ -193,7 +208,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: var(--description-color);
+  color: var(--description-grey);
 }
 
 /* TODO list-style or ::before / ::after ?
@@ -203,14 +218,14 @@ body {
 
 .about-wrapper__description ,
 .about-wrapper__item {
-  color: var(--description-color);
+  color: var(--description-grey);
 }
 
 /* About data */
 
 .about-data__img {
   background: linear-gradient(to bottom right,
-  var(--accent-color), var(--basic-yellow), var(--basic-green));
+  var(--accent-red), var(--accent-yellow), var(--accent-green));
 }
 
 .about-data__heading-list {
@@ -220,7 +235,7 @@ body {
 .advantages__term {
   font-size: 16px;
   line-height: 18px;
-  color: var(--description-color);
+  color: var(--description-grey);
 }
 
 .advantages__persentages {
@@ -243,7 +258,7 @@ body {
 .clients__ref {
   opacity: 20%;
 /* TODO Опасити у бекграунда или он там вообще не нужен?
-  background-color: #E0E0E0;
+  background-color: var(--empty-light-grey);
   background-size: 100%; */
 }
 
@@ -277,7 +292,7 @@ body {
 .address__tel {
   font-size: 16px;
   line-height: 18px;
-  color: #666;
+  color: var(--contacts-light-grey);
 }
 
 .address__tel {
@@ -287,7 +302,7 @@ body {
 /* Map */
 
 .map {
-  background-color: #E0E0E0;
+  background-color: var(--empty-light-grey);
 }
 
 /* Social */
@@ -297,16 +312,16 @@ body {
 }
 
 .social-media__ref {
-  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+  background: linear-gradient(0deg, var(--light-grey), var(--light-grey)), var(--basic-white);
 }
 
 .social-media__ref:hover {
-  background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
+  background: linear-gradient(0deg, var(--accent-red-hover), var(--accent-red-hover)), var(--basic-white);
 }
 
 .social-media__ref:active {
-  background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
-  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  background: linear-gradient(0deg, var(--accent-red-active), var(--accent-red-active)), var(--basic-white);
+  box-shadow: inset 0 3px 0 var(--box-shadow-active);
 }
 
 .social-discount__heading {
@@ -318,5 +333,5 @@ body {
 .social-discount__description {
   font-size: 16px;
   line-height: 22px;
-  color: #444;
+  color: var(--social-extra-grey);
 }
