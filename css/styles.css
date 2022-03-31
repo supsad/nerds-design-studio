@@ -35,6 +35,7 @@
   --basic-yellow: #EFC849;
   --light-grey: #E1E1E1;
   --extra-grey: #4D4D4D;
+  --description-color: #283136;
 }
 
 /* Standard */
@@ -105,7 +106,17 @@ body {
   line-height: 55px;
 }
 
+.slider__description {
+  color: var(--description-color);
+}
+
+.slide-first, .slide-second, .slide-third {
+  background-color: #E0E0E0;
+}
+
 /* Services */
+
+.
 
 /* About */
 
