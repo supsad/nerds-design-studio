@@ -90,7 +90,7 @@ body {
   list-style: none;
 }
 
-.main-navigation__ref,
+.main-navigation__ref ,
 .main-header__cart-bug {
   color: #000;
   text-decoration: none;
@@ -100,13 +100,13 @@ body {
   opacity: 70%;
 }
 
-.main-navigation__ref:hover,
+.main-navigation__ref:hover ,
 .main-header__cart-bug:hover {
   color: var(--accent-color);
 }
 
-.header__logo:active,
-.main-navigation__ref:active,
+.header__logo:active ,
+.main-navigation__ref:active ,
 .main-header__cart-bug:active {
   opacity: 30%;
 }
@@ -123,8 +123,8 @@ body {
   color: var(--description-color);
 }
 
-.slide-first,
-.slide-second,
+.slide-first ,
+.slide-second ,
 .slide-third {
   background-color: #E0E0E0;
 }
@@ -149,12 +149,12 @@ body {
   color: var(--description-color);
 }
 
-.services__img_green,
+.services__img_green ,
 .services__button_green {
   background-color: var(--basic-green);
 }
 
-.services__img_yellow,
+.services__img_yellow ,
 .services__button_yellow {
   background-color: var(--basic-yellow);
 }
@@ -195,7 +195,7 @@ body {
   list-style: url("#");
 }*/
 
-.about-wrapper__description,
+.about-wrapper__description ,
 .about-wrapper__item {
   color: var(--description-color);
 }
@@ -212,7 +212,6 @@ body {
 }
 
 .advantages__term {
-  font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: var(--description-color);
@@ -251,6 +250,33 @@ body {
 }
 
 /* Footer */
+
+/* Contacts */
+
+.contacts {
+  background-color: var(--basic-white);
+}
+
+.address {
+  font-style: normal;
+}
+
+.address__heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.address__location ,
+.address__tel {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666;
+}
+
+.address__tel {
+  text-decoration: none;
+}
 
 /* Map */
 
