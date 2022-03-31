@@ -8,17 +8,8 @@
   font-style: normal;
 }
 
-@font-face {                    /* normal 700 */
-  font-family: "Roboto";
-  src: local("Roboto Bold"),
-    url("/fonts/robotobold.woff2"),
-    url("/fonts/robotobold.woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
 @font-face {                    /* normal 500 */
-  font-family: "Robot";
+  font-family: "Roboto";
   src: local("Roboto Medium"),
     url("/fonts/robotomedium.woff2"),
     url("/fonts/robotomedium.woff");
@@ -26,21 +17,81 @@
   font-style: normal;
 }
 
-/* Color */
-
-root {
-  --BASIC-WHITE: #fff;
-  --BASIC-GREY: #eee;
-  --BASIC-RED: #FB565A;
-  --BASIC-GREEN: #00CA74;
-  --BASIC-YELLOW: #EFC849;
-  --LIGHT-GREY: #E1E1E1;
-  --EXTRA-GREY: #4D4D4D;
+@font-face {                    /* normal 700 */
+  font-family: "Roboto";
+  src: local("Roboto Bold"),
+  url("/fonts/robotobold.woff2"),
+  url("/fonts/robotobold.woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
-/* standard */
+/* Color */
+ :root {
+  --basic-white: #fff;
+  --basic-grey: #eee;
+  --accent-color: #FB565A;
+  --basic-green: #00CA74;
+  --basic-yellow: #EFC849;
+  --light-grey: #E1E1E1;
+  --extra-grey: #4D4D4D;
+}
+
+/* Standard */
 
 body {
   font-family: "Roboto", "Arial", sans-serif;
+  background-color: var(--basic-white);
 }
 
+/* Button */
+
+/* Header */
+
+.main-header {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  background-color: var(--basic-grey);
+  text-transform: uppercase;
+}
+
+.main-navigation__item {
+  list-style: none;
+}
+
+.main-navigation__ref, .main-header__cart-bug {
+  color: #000;
+  text-decoration: none;
+}
+
+.header__logo:hover {
+  opacity: 70%;
+}
+
+.main-navigation__ref:hover,
+.main-header__cart-bug:hover {
+  color: var(--accent-color);
+}
+
+.header__logo:active,
+.main-navigation__ref:active,
+.main-header__cart-bug:active {
+  opacity: 30%;
+}
+
+/* Presentation */
+
+/* Services */
+
+/* About */
+
+/* About data */
+
+/* Clients */
+
+/* Footer */
+
+/* Map */
+
+/* Social */
