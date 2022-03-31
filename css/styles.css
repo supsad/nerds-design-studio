@@ -46,6 +46,17 @@ body {
 
 /* Button */
 
+.button {
+  background-color: var(--accent-color);
+
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: var(--basic-white);
+}
+
 /* Header */
 
 .main-header {
