@@ -78,7 +78,7 @@ body {
 
 /* Header */
 
-.main-header {
+.page-header {
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
@@ -86,29 +86,35 @@ body {
   text-transform: uppercase;
 }
 
-.main-navigation__item {
+.page-navigation__item {
   list-style: none;
 }
 
-.main-navigation__ref ,
-.main-header__cart-bug {
+.page-navigation__ref ,
+.page-header__cart-bug {
   color: #000;
   text-decoration: none;
 }
 
-.header__logo:hover {
+.page-header__logo:hover {
   opacity: 70%;
 }
 
-.main-navigation__ref:hover ,
-.main-header__cart-bug:hover {
+.page-navigation__ref:hover ,
+.page-header__cart-bug:hover {
   color: var(--accent-color);
 }
 
-.header__logo:active ,
-.main-navigation__ref:active ,
-.main-header__cart-bug:active {
+.page-header__logo:active ,
+.page-navigation__ref:active ,
+.page-header__cart-bug:active {
   opacity: 30%;
+}
+
+.page-header__logo_disabled ,
+.page-header__logo_disabled:hover ,
+.page-header__logo_disabled:active {
+  opacity: 100%;
 }
 
 /* Presentation */
