@@ -42,6 +42,12 @@
    --contacts-light-grey: #666;
    --social-extra-grey: #444;
 
+   --input-light-grey: #D7DCDE;
+   --input-hover-light-grey: #B4B9BB;
+
+   --basic-grey-hover: #DFDFDF;
+   --basic-gery-active: #D5D5D5;
+
    --accent-red-hover: #E74246;
    --accent-green-hover: #00BC6C;
    --accent-yellow-hover: #EAB534;
@@ -51,6 +57,8 @@
 
    --box-shadow-active: rgba(0, 1, 1, 0.1);
    --text-button-active: rgba(255, 255, 255, 30%);
+   --point-basic-white: rgba(0, 0, 0, 0.0001);
+   --border-grey: #DBDBDB;
 }
 
 /* Standard */
