@@ -49,6 +49,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  color: #000;
 }
 
 /* Button */
@@ -116,7 +117,31 @@ body {
 
 /* Services */
 
-.
+.services__item {
+  list-style: none;
+}
+
+.services__img {
+  background-color: var(--accent-color);
+}
+
+.services__heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.services__description {
+  color: var(--description-color);
+}
+
+.services__img_green, .services__button_green {
+  background-color: var(--basic-green);
+}
+
+.services__img_yellow, .services__button_yellow {
+  background-color: var(--basic-yellow);
+}
 
 /* About */
 
