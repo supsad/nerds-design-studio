@@ -44,6 +44,12 @@ body {
   background-color: var(--basic-white);
 }
 
+.wrapper {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
 /* Button */
 
 .button {
@@ -92,6 +98,12 @@ body {
 }
 
 /* Presentation */
+
+.slider__heading {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
 
 /* Services */
 
