@@ -175,6 +175,33 @@ body {
 
 /* About data */
 
+.about-data__img {
+  background: linear-gradient(to bottom right,
+  var(--accent-color), var(--basic-yellow), var(--basic-green));
+}
+
+.about-data__heading-list {
+  font-weight: 700;
+}
+
+.advantages__term {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--description-color);
+}
+
+.advantages__persentages {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 64px;
+}
+
+.advantages__persentages_sup {
+  font-size: 26px;
+  line-height: 40px;
+}
+
 /* Clients */
 
 /* Footer */
