@@ -26,6 +26,21 @@
   font-style: normal;
 }
 
+/* Color */
+
+root {
+  --BASIC-WHITE: #fff;
+  --BASIC-GREY: #eee;
+  --BASIC-RED: #FB565A;
+  --BASIC-GREEN: #00CA74;
+  --BASIC-YELLOW: #EFC849;
+  --LIGHT-GREY: #E1E1E1;
+  --EXTRA-GREY: #4D4D4D;
+}
+
+/* standard */
+
 body {
   font-family: "Roboto", "Arial", sans-serif;
 }
+
