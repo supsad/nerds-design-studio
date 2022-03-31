@@ -63,6 +63,17 @@ body {
   line-height: 18px;
   text-decoration: none;
   color: var(--basic-white);
+  border-radius: 3px;
+}
+
+.button:hover {
+  background-color: #E74246;
+}
+
+.button:active {
+  background-color: #D7373B;
+  box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+  color: rgba(255, 255, 255, 30%);
 }
 
 /* Header */
@@ -146,6 +157,22 @@ body {
 .services__img_yellow,
 .services__button_yellow {
   background-color: var(--basic-yellow);
+}
+
+.services__button_green:hover {
+  background-color: #00BC6C;
+}
+
+.services__button_green:active {
+  background-color: #00AA62;
+}
+
+.services__button_yellow:hover {
+  background-color: #EAB534;
+}
+
+.services__button_yellow:active {
+  background-color: #E5A722;
 }
 
 /* About */
