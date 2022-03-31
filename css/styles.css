@@ -231,6 +231,25 @@ body {
 
 /* Clients */
 
+.clients__item {
+  list-style: none;
+}
+
+.clients__ref {
+  opacity: 20%;
+/* TODO Опасити у бекграунда или он там вообще не нужен?
+  background-color: #E0E0E0;
+  background-size: 100%; */
+}
+
+.clients__ref:hover {
+  opacity: 100%;
+}
+
+.clients__ref:active {
+  opacity: 10%;
+}
+
 /* Footer */
 
 /* Map */
