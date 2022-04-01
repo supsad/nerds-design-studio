@@ -44,45 +44,45 @@
     </nav>
   </header>
 
-  <main>
+  <main class="wrapper">
     <h1>Магазин готовых шаблонов</h1>
 
-    <section>
+    <section class="filters">
       <h2>Фильтры</h2>
 
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
-          <legend>Стоимость:</legend>
+      <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="filters__fieldset">
+          <legend class="filters__heading">Стоимость:</legend>
 
-          <p>
+          <div class="filters__price-range">
             <label for="price-range">Диапазон стоимости</label>
             <input type="range" name="price" id="price-range" min="0" max="200000"
                    step="10000" value="150000">
-          </p>
+          </div>
 
-          <label for="price-from">От</label>
+          <label class="filters__price-input" for="price-from">От</label>
           <input type="number" id="price-from" name="price-from" value="0">
 
-          <label for="price-to">До</label>
+          <label class="filters__price-input" for="price-to">До</label>
           <input type="number" id="price-to" name="price-to" value="150000">
         </fieldset>
 
-        <fieldset>
-          <legend>Сетка:</legend>
-          <ul>
-            <li>
+        <fieldset class="filters__fieldset">
+          <legend class="filters__heading">Сетка:</legend>
+          <ul class="filters__options-list">
+            <li class="filters__options-item">
               <label>
                 <input type="radio" name="layout" id="layout-adaptive" value="adaptive" checked>
                 Адаптивная
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="radio" name="layout" id="layout-fixed" value="fixed">
                 Фиксированная
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="radio" name="layout" id="layout-rubber" value="rubber">
                 Резиновая
@@ -91,35 +91,35 @@
           </ul>
         </fieldset>
 
-        <fieldset>
-          <legend>Особенности:</legend>
+        <fieldset class="filters__fieldset">
+          <legend class="filters__heading">Особенности:</legend>
 
-          <ul>
-            <li>
+          <ul class="filters__options-list">
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="slider" id="features-slider" checked>
                 Слайдер
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="advantage" id="features-advantage">
                 Блок преимуществ
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="news" id="features-news" checked>
                 Новости
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="gallery" id="features-galerry">
                 Галерея
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="bag" id="features-bag">
                 Корзина
@@ -128,7 +128,7 @@
           </ul>
         </fieldset>
 
-        <button type="submit">Показать</button>
+        <button class="button filters__button" type="submit">Показать</button>
       </form>
     </section>
 
