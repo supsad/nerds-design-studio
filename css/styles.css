@@ -46,7 +46,7 @@
    --input-hover-light-grey: #B4B9BB;
 
    --basic-grey-hover: #DFDFDF;
-   --basic-gery-active: #D5D5D5;
+   --basic-grey-active: #D5D5D5;
 
    --accent-red-hover: #E74246;
    --accent-green-hover: #00BC6C;
@@ -60,6 +60,8 @@
    --point-basic-white: rgba(0, 0, 0, 0.0001);
    --border-grey: #DBDBDB;
 }
+
+/* Index */
 
 /* Standard */
 
@@ -86,7 +88,9 @@ body {
   line-height: 18px;
   text-decoration: none;
   color: var(--basic-white);
+
   border-radius: 3px;
+  border: none;
 }
 
 .button:hover {
@@ -265,6 +269,7 @@ body {
 
 .clients__ref {
   opacity: 20%;
+
 /* TODO Опасити у бекграунда или он там вообще не нужен?
   background-color: var(--empty-light-grey);
   background-size: 100%; */
@@ -341,5 +346,81 @@ body {
 .social-discount__description {
   font-size: 16px;
   line-height: 22px;
+
   color: var(--social-extra-grey);
+}
+
+/* Catalog */
+
+/* Filters */
+
+.filters__fieldset {
+  border: none;
+}
+
+.filters__heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.filters__price-range {
+  background-color: var(--basic-grey);
+  border-radius: 3px;
+}
+
+input[type="number"] {
+  background-color: var(--basic-grey);
+
+  border-radius: 3px;
+  border: none;
+}
+
+.filters__price-input ,
+input[type="number"] {
+  color: var(--description-grey);
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.filters__options-item {
+  list-style: none;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--description-grey);
+}
+
+input[type="radio"] ,
+input[type="checkbox"] {
+  color: var(--extra-grey);
+  opacity: 40%;
+}
+
+input[type="radio"]:hover ,
+input[type="checkbox"]:hover {
+  opacity: 100%;
+}
+
+.filters__options-item_disabled ,
+input[type="radio"]:disabled ,
+input[type="checkbox"]:disabled {
+  opacity: 30%;
+}
+
+.filters__button {
+  background-color: var(--basic-grey);
+  color: var(--basic-black);
+}
+
+.filters__button:hover {
+  background-color: var(--basic-grey-hover);
+}
+
+.filters__button:active {
+  background-color: var(--basic-grey-active);
+  box-shadow: inset 0 3px 0 var(--box-shadow-active);
+  color: var(--text-button-active);
 }
