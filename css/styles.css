@@ -451,18 +451,18 @@ input[type="checkbox"]:disabled {
   opacity: 100%;
 }
 
-.sort__item-button {
+.sort__item-arrows {
   list-style: none;
   color: var(--arrows-grey);
   opacity: 50%;
 }
 
-.sort__item-button:hover {
+.sort__item-arrows:hover {
   opacity: 100%;
 }
 
-.sort__item-button:active ,
-.sort__item-button_active {
+.sort__item-arrows:active ,
+.sort__item-arrows_active {
   color: var(--arrows-black);
   opacity: 100%;
 }
