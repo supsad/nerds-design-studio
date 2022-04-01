@@ -106,25 +106,17 @@ body {
   color: var(--text-button-active);
 }
 
-.button-catalog {
+.button-grey {
   background-color: var(--basic-grey);
   color: var(--basic-black);
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  border-radius: 3px;
-  border: none;
 }
 
-.button-catalog:hover {
+.button-grey:hover {
   background-color: var(--basic-grey-hover);
 }
 
-.button-catalog:active {
+.button-grey:active {
   background-color: var(--basic-grey-active);
-  box-shadow: inset 0 3px 0 var(--box-shadow-active);
-  color: var(--text-button-active);
 }
 
 /* Ref */
@@ -507,13 +499,15 @@ input[type="checkbox"]:disabled {
   color: var(--contacts-light-grey);
 }
 
-.sites__pages-item {
+/* Pagination */
+
+.pagination__item {
   list-style: none;
 }
 
-.sites__button-catalog_disabled ,
-.sites__button-catalog_disabled:hover ,
-.sites__button-catalog_disabled:active {
+.pagination__button_disabled ,
+.pagination__button_disabled:hover ,
+.pagination__button_disabled:active {
   background-color: var(--point-basic-white);
   border: 3px solid var(--border-grey);
   box-sizing: border-box;
