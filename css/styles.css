@@ -105,6 +105,44 @@ body {
   color: var(--text-button-active);
 }
 
+.button-catalog {
+  background-color: var(--basic-grey);
+  color: var(--basic-black);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 3px;
+  border: none;
+}
+
+.button-catalog:hover {
+  background-color: var(--basic-grey-hover);
+}
+
+.button-catalog:active {
+  background-color: var(--basic-grey-active);
+  box-shadow: inset 0 3px 0 var(--box-shadow-active);
+  color: var(--text-button-active);
+}
+
+/* Ref */
+
+.ref {
+  color: var(--basic-black);
+  opacity: 100%;
+  text-decoration: none;
+}
+
+.ref:hover {
+  color: var(--accent-red);
+}
+
+.ref:active {
+  color: var(--basic-black);
+  opacity: 100%;
+}
+
 /* Header */
 
 .page-header {
@@ -119,24 +157,11 @@ body {
   list-style: none;
 }
 
-.page-navigation__ref ,
-.page-header__cart-bug {
-  color: var(--basic-black);
-  text-decoration: none;
-}
-
 .page-header__logo:hover {
   opacity: 70%;
 }
 
-.page-navigation__ref:hover ,
-.page-header__cart-bug:hover {
-  color: var(--accent-red);
-}
-
-.page-header__logo:active ,
-.page-navigation__ref:active ,
-.page-header__cart-bug:active {
+.page-header__logo:active {
   opacity: 30%;
 }
 
@@ -412,21 +437,6 @@ input[type="checkbox"]:disabled {
   opacity: 30%;
 }
 
-.filters__button {
-  background-color: var(--basic-grey);
-  color: var(--basic-black);
-}
-
-.filters__button:hover {
-  background-color: var(--basic-grey-hover);
-}
-
-.filters__button:active {
-  background-color: var(--basic-grey-active);
-  box-shadow: inset 0 3px 0 var(--box-shadow-active);
-  color: var(--text-button-active);
-}
-
 /* Sort */
 
 .sort__heading {
@@ -465,4 +475,44 @@ input[type="checkbox"]:disabled {
 .sort__item-arrows_active {
   color: var(--arrows-black);
   opacity: 100%;
+}
+
+/* Sites */
+
+.sites__item {
+  list-style: none;
+
+  background-color: var(--basic-grey-hover);
+}
+
+.sites__item-info {
+  background-color: var(--basic-grey);
+}
+
+.sites__item-heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.sites__item-description {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--contacts-light-grey);
+}
+
+.sites__pages-item {
+  list-style: none;
+}
+
+.sites__button-catalog_disabled ,
+.sites__button-catalog_disabled:hover ,
+.sites__button-catalog_disabled:active {
+  background-color: var(--point-basic-white);
+  border: 3px solid var(--border-grey);
+  box-sizing: border-box;
+  cursor: default;
+  box-shadow: none;
+  color: var(--basic-black);
 }
