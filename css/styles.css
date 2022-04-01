@@ -56,6 +56,7 @@
    --accent-yellow-active: #E5A722;
 
    --box-shadow-active: rgba(0, 1, 1, 0.1);
+   --drop-shadow-black: rgba(0, 0, 0, 0.25);
    --text-button-active: rgba(255, 255, 255, 30%);
    --point-basic-white: rgba(0, 0, 0, 0.0001);
    --border-grey: #DBDBDB;
@@ -483,6 +484,10 @@ input[type="checkbox"]:disabled {
   list-style: none;
 
   background-color: var(--basic-grey-hover);
+}
+
+.sites__item:hover {
+  filter: drop-shadow(0 6px 15px var(--drop-shadow-black));
 }
 
 .sites__item-info {
