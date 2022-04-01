@@ -29,39 +29,37 @@
 /* Color */
  :root {
    --basic-black: #000;
-  --basic-white: #FFF;
-  --basic-grey: #EEE;
-  --accent-red: #FB565A;
-  --accent-green: #00CA74;
-  --accent-yellow: #EFC849;
-  --light-grey: #E1E1E1;
-  --extra-grey: #4D4D4D;
-  --description-grey: #283136;
-
-   --empty-light-grey: #E0E0E0;
-   --contacts-light-grey: #666;
-   --social-extra-grey: #444;
-
-   --input-light-grey: #D7DCDE;
-   --input-hover-light-grey: #B4B9BB;
-
+   --basic-white: #FFF;
+   --basic-grey: #EEE;
    --basic-grey-hover: #DFDFDF;
    --basic-grey-active: #D5D5D5;
+   --light-grey-100: #D7DCDE;
+   --light-grey-200: #E0E0E0;
+   --light-grey-250: #E1E1E1;
+   --light-grey-300: #B4B9BB;
+   --extra-grey-100: #666;
+   --extra-grey-200: #4D4D4D;
+   --extra-grey-250: #444;
+   --extra-grey-300: #283136;
 
+   --border-grey: #DBDBDB;
+   --arrows-grey: #A6A6A6;
+   --arrows-black: #231F20;
+
+   --accent-red: #FB565A;
    --accent-red-hover: #E74246;
-   --accent-green-hover: #00BC6C;
-   --accent-yellow-hover: #EAB534;
    --accent-red-active: #D7373B;
+   --accent-green: #00CA74;
+   --accent-green-hover: #00BC6C;
    --accent-green-active: #00AA62;
+   --accent-yellow: #EFC849;
+   --accent-yellow-hover: #EAB534;
    --accent-yellow-active: #E5A722;
 
    --box-shadow-active: rgba(0, 1, 1, 0.1);
    --drop-shadow-black: rgba(0, 0, 0, 0.25);
    --text-button-active: rgba(255, 255, 255, 30%);
-   --point-basic-white: rgba(0, 0, 0, 0.0001);
-   --border-grey: #DBDBDB;
-   --arrows-grey: #A6A6A6;
-   --arrows-black: #231F20;
+   --point-basic-black: rgba(0, 0, 0, 0.0001);
 }
 
 /* Index */
@@ -173,13 +171,13 @@ body {
 }
 
 .slider__description {
-  color: var(--description-grey);
+  color: var(--extra-grey-300);
 }
 
 .slide-first ,
 .slide-second ,
 .slide-third {
-  background-color: var(--empty-light-grey);
+  background-color: var(--light-grey-200);
 }
 
 /* Services */
@@ -199,7 +197,7 @@ body {
 }
 
 .services__description {
-  color: var(--description-grey);
+  color: var(--extra-grey-300);
 }
 
 .services__img_green ,
@@ -240,7 +238,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  color: var(--description-grey);
+  color: var(--extra-grey-300);
 }
 
 /* TODO list-style or ::before / ::after ?
@@ -250,7 +248,7 @@ body {
 
 .about-wrapper__description ,
 .about-wrapper__item {
-  color: var(--description-grey);
+  color: var(--extra-grey-300);
 }
 
 /* About data */
@@ -267,7 +265,7 @@ body {
 .advantages__term {
   font-size: 16px;
   line-height: 18px;
-  color: var(--description-grey);
+  color: var(--extra-grey-300);
 }
 
 .advantages__persentages {
@@ -325,7 +323,7 @@ body {
 .address__tel {
   font-size: 16px;
   line-height: 18px;
-  color: var(--contacts-light-grey);
+  color: var(--extra-grey-100);
 }
 
 .address__tel {
@@ -335,7 +333,7 @@ body {
 /* Map */
 
 .map {
-  background-color: var(--empty-light-grey);
+  background-color: var(--light-grey-200);
 }
 
 /* Social */
@@ -345,7 +343,7 @@ body {
 }
 
 .social-media__ref {
-  background: linear-gradient(0deg, var(--light-grey), var(--light-grey)), var(--basic-white);
+  background: linear-gradient(0deg, var(--light-grey-250), var(--light-grey-250)), var(--basic-white);
 }
 
 .social-media__ref:hover {
@@ -367,7 +365,7 @@ body {
   font-size: 16px;
   line-height: 22px;
 
-  color: var(--social-extra-grey);
+  color: var(--extra-grey-250);
 }
 
 /* Catalog */
@@ -399,7 +397,7 @@ input[type="number"] {
 
 .filters__price-input ,
 input[type="number"] {
-  color: var(--description-grey);
+  color: var(--extra-grey-300);
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
@@ -410,12 +408,12 @@ input[type="number"] {
 
   font-size: 16px;
   line-height: 20px;
-  color: var(--description-grey);
+  color: var(--extra-grey-300);
 }
 
 input[type="radio"] ,
 input[type="checkbox"] {
-  color: var(--extra-grey);
+  color: var(--extra-grey-200);
   opacity: 40%;
 }
 
@@ -496,7 +494,7 @@ input[type="checkbox"]:disabled {
 .sites__item-description {
   font-size: 16px;
   line-height: 18px;
-  color: var(--contacts-light-grey);
+  color: var(--extra-grey-100);
 }
 
 /* Pagination */
@@ -508,7 +506,7 @@ input[type="checkbox"]:disabled {
 .pagination__button_disabled ,
 .pagination__button_disabled:hover ,
 .pagination__button_disabled:active {
-  background-color: var(--point-basic-white);
+  background-color: var(--point-basic-black);
   border: 3px solid var(--border-grey);
   box-sizing: border-box;
   cursor: default;
