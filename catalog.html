@@ -4,85 +4,85 @@
   <meta charset="UTF-8">
   <title>Каталог продуктов</title>
 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
-  <header>
-    <a href="index.html">
+  <header class="page-header">
+    <a class="logo page-header__logo">
       <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Перейти на главную страницу сайта">
     </a>
-    <nav>
-      <ul>
-        <li>
-          <!-- Сделать якорь -->
-          <a href="blank.html">
+    <nav class="main-navigation page-header__page-navigation">
+      <ul class="page-navigation__list">
+        <li class="page-navigation__item">
+          <a class="page-navigation__ref" href="blank.html">
             Студия
           </a>
         </li>
-        <li>
-          <!-- Сделать якорь -->
-          <a href="blank.html">
+        <li class="page-navigation__item">
+          <a class="page-navigation__ref" href="blank.html">
             Клиенты
           </a>
         </li>
-        <li>
-          <a>
+        <li class="page-navigation__item">
+          <a class="page-navigation__ref page-navigation__ref_active" href="catalog.html">
             Магазин
           </a>
         </li>
-        <li>
-          <!-- Сделать якорь -->
-          <a href="blank.html">
+        <li class="page-navigation__item">
+          <a class="page-navigation__ref" href="blank.html">
             Контакты
           </a>
         </li>
       </ul>
-      <a href="blank.html">Корзина</a>
+      <a class="page-header__cart-bug" href="blank.html">Корзина</a>
     </nav>
   </header>
 
-  <main>
+  <main class="wrapper">
     <h1>Магазин готовых шаблонов</h1>
 
-    <section>
+    <section class="filters">
       <h2>Фильтры</h2>
 
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
-          <legend>Стоимость:</legend>
+      <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="filters__fieldset">
+          <legend class="filters__heading">Стоимость:</legend>
 
-          <p>
+          <div class="filters__price-range">
             <label for="price-range">Диапазон стоимости</label>
             <input type="range" name="price" id="price-range" min="0" max="200000"
                    step="10000" value="150000">
-          </p>
+          </div>
 
-          <label for="price-from">От</label>
+          <label class="filters__price-input" for="price-from">От</label>
           <input type="number" id="price-from" name="price-from" value="0">
 
-          <label for="price-to">До</label>
+          <label class="filters__price-input" for="price-to">До</label>
           <input type="number" id="price-to" name="price-to" value="150000">
         </fieldset>
 
-        <fieldset>
-          <legend>Сетка:</legend>
-          <ul>
-            <li>
+        <fieldset class="filters__fieldset">
+          <legend class="filters__heading">Сетка:</legend>
+          <ul class="filters__options-list">
+            <li class="filters__options-item">
               <label>
                 <input type="radio" name="layout" id="layout-adaptive" value="adaptive" checked>
                 Адаптивная
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="radio" name="layout" id="layout-fixed" value="fixed">
                 Фиксированная
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="radio" name="layout" id="layout-rubber" value="rubber">
                 Резиновая
@@ -91,35 +91,35 @@
           </ul>
         </fieldset>
 
-        <fieldset>
-          <legend>Особенности:</legend>
+        <fieldset class="filters__fieldset">
+          <legend class="filters__heading">Особенности:</legend>
 
-          <ul>
-            <li>
+          <ul class="filters__options-list">
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="slider" id="features-slider" checked>
                 Слайдер
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="advantage" id="features-advantage">
                 Блок преимуществ
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="news" id="features-news" checked>
                 Новости
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="gallery" id="features-galerry">
                 Галерея
               </label>
             </li>
-            <li>
+            <li class="filters__options-item">
               <label>
                 <input type="checkbox" name="bag" id="features-bag">
                 Корзина
@@ -128,189 +128,177 @@
           </ul>
         </fieldset>
 
-        <button type="submit">Показать</button>
+        <button class="button-grey filters__button-grey" type="submit">Показать</button>
       </form>
     </section>
 
-    <section>
+    <section class="sort">
       <h2>Сортировка</h2>
 
-      <p>Сортировать:</p>
+      <p class="sort__heading">Сортировать:</p>
 
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <ul>
-          <li>
+      <form class="sort__form" action="https://echo.htmlacademy.ru" method="get">
+        <ul class="sort__list">
+          <li class="sort__item sort__item_active">
             <button type="button" name="sort-list">По цене</button>
           </li>
-          <li>
+          <li class="sort__item">
             <button type="button" name="sort-list">По типу</button>
           </li>
-          <li>
+          <li class="sort__item">
             <button type="button" name="sort-list">По названию</button>
           </li>
         </ul>
 
-        <ul>
-          <li>
+        <ul class="sort__list-arrows">
+          <li class="sort__item-arrows sort__item-arrows_active">
             <button type="button" name="sort-list-decrease">По убыванию</button>
           </li>
-          <li>
+          <li class="sort__item-arrows">
             <button type="button" name="sort-list-increase">По возрастанию</button>
           </li>
         </ul>
       </form>
     </section>
 
-    <section>
+    <section class="sites">
       <h2>Список шаблонов</h2>
 
       <!-- Подумать над тем, что нужно ли оборачивать блок с презентацией сайта в ссылку
       или оставить только ссылку на название -->
-      <ul>
-        <li>
+      <ul class="sites__list">
+        <li class="sites__item">
 <!--          <svg>-->
 <!--            <rect x="0" y="0" width="360" height="40"/>-->
 <!--          </svg>-->
-          <a href="blank.html">
-            <img src="img/sites-list/sedona-opti.png" width="358" height="578" alt="Шаблон сайта Sedona">
-          </a>
 
-          <div>
-              <h3>
-                <a href="#">Sedona</a>
-              </h3>
-              <p>
-                Информационный сайт <br>
-                для туристов
-              </p>
-              <a href="blank.html">9 900 Р</a>
-          </div>png      </li>
+          <img src="img/sites-list/sedona-opti.png" width="358" height="578" alt="Шаблон сайта Sedona">
 
-        <li>
-          <a href="blank.html">
-            <img src="img/sites-list/pink-opti.png" width="358" height="578" alt="Шаблон сайта Pink App">
-          </a>
-
-          <div>
-              <h3>
-                <a href="#">Pink App</a>
-              </h3>
-              <p>
-                Продуктовый лендинг <br>
-                приложения для iOS и Android
-              </p>
-              <a href="blank.html">9 900 Р</a>
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Sedona</a>
+            </h3>
+            <p class="sites__item-description">
+              Информационный сайт <br>
+              для туристов
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
           </div>
         </li>
 
-        <li>
-          <a href="blank.html">
-            <img src="img/sites-list/barbershop-opti.png" width="358" height="578"
-                 alt="Шаблон сайта Barbershop Borodinski">
-          </a>
+        <li class="sites__item">
+          <img src="img/sites-list/pink-opti.png" width="358" height="578" alt="Шаблон сайта Pink App">
 
-          <div>
-              <h3>
-                <a href="#">Barbershop</a>
-              </h3>
-              <p>
-                Сайт салона красоты. <br>
-                Для мужчин, да.
-              </p>
-              <a href="blank.html">9 900 Р</a>
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Pink App</a>
+            </h3>
+            <p class="sites__item-description">
+              Продуктовый лендинг <br>
+              приложения для iOS и Android
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
           </div>
         </li>
 
-        <li>
-          <a href="blank.html">
-            <img src="img/sites-list/mishka-opti.png" width="358" height="578" alt="Шаблон сайта Mishka">
-          </a>
+        <li class="sites__item">
+          <img src="img/sites-list/barbershop-opti.png" width="358" height="578"
+               alt="Шаблон сайта Barbershop Borodinski">
 
-          <div>
-              <h3>
-                <a href="#">MISHKA</a>
-              </h3>
-              <p>
-                Интернет-магазин <br>
-                вязаных игрушек
-              </p>
-              <a href="blank.html">9 900 Р</a>
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Barbershop</a>
+            </h3>
+            <p class="sites__item-description">
+              Сайт салона красоты. <br>
+              Для мужчин, да.
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
           </div>
         </li>
 
-        <li>
-          <a href="blank.html">
-            <img src="img/sites-list/aplus-opti.png" width="358" height="578" alt="Шаблон сайта A Plus">
-          </a>
+        <li class="sites__item">
+          <img src="img/sites-list/mishka-opti.png" width="358" height="578" alt="Шаблон сайта Mishka">
 
-          <div>
-              <h3>
-                <a href="#">A Plus</a>
-              </h3>
-              <p>
-                Лендинг курсов повышения <br>
-                квалификации
-              </p>
-              <a href="blank.html">9 900 Р</a>
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Mishka</a>
+            </h3>
+            <p class="sites__item-description">
+              Интернет-магазин <br>
+              вязаных игрушек
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
           </div>
         </li>
 
-        <li>
-          <a href="blank.html">
-            <img src="img/sites-list/kvast-opti.png" width="358" height="578" alt="Шаблон сайта Кваст">
-          </a>
+        <li class="sites__item">
+          <img src="img/sites-list/aplus-opti.png" width="358" height="578" alt="Шаблон сайта A Plus">
 
-          <div>
-              <h3>
-                <a href="#">КВАСТ</a>
-              </h3>
-              <p>
-                Промо-сайт производителя <br>
-                крафтового кваса
-              </p>
-              <a href="blank.html">9 900 Р</a>
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">A Plus</a>
+            </h3>
+            <p class="sites__item-description">
+              Лендинг курсов повышения <br>
+              квалификации
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
+          </div>
+        </li>
+
+        <li class="sites__item">
+          <img src="img/sites-list/kvast-opti.png" width="358" height="578" alt="Шаблон сайта Кваст">
+
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Кваст</a>
+            </h3>
+            <p class="sites__item-description">
+              Промо-сайт производителя <br>
+              крафтового кваса
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
           </div>
         </li>
       </ul>
 
-      <ul>
-        <li>
-          <a>1</a>
+      <ul class="pagination sites__pagination">
+        <li class="pagination__item">
+          <a class="button button_grey pagination__button pagination__button_disabled">1</a>
         </li>
-        <li>
-          <a href="blank.html">2</a>
+        <li class="pagination__item">
+          <a class="button button_grey pagination__button" href="blank.html">2</a>
         </li>
-        <li>
-          <a href="blank.html">3</a>
+        <li class="pagination__item">
+          <a class="button button_grey pagination__button" href="blank.html">3</a>
         </li>
-        <li>
-          <a href="blank.html">Следующая</a>
+        <li class="pagination__item">
+          <a class="button button_grey pagination__button pagination__button_next" href="blank.html">Следующая</a>
         </li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <section>
+  <footer class="page-footer">
+    <section class="contacts page-footer__contacts">
       <h2>Контакты</h2>
 
-      <address>
-        <p>
-          <b>NЁRDS DESIGN STUDIO</b>
-        </p>
+      <address class="address contacts__address">
+        <p class="address__heading">NЁRDS DESIGN STUDIO</p>
 
-        <p>
+        <p class="address__location">
           наб. Реки Карповки, <br>
           5 лит П, Санкт-Петербург
         </p>
 
-        <a href="tel:88005558628">+7 800 555-86-28</a>
+        <a class="address__tel" href="tel:88005558628">+7 800 555-86-28</a>
       </address>
 
-      <a href="blank.html">Напишите нам</a>
+      <a class="button contacts__button" href="blank.html">Напишите нам</a>
     </section>
 
-    <section>
+    <section class="map">
       <h2>Местоположение</h2>
       <!-- Вставить карту -->
 
@@ -318,32 +306,34 @@
       <img src="img/map/map-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
     </section>
 
-    <section>
+    <section class="social-media">
       <h2>Социальные сети</h2>
 
       <!-- Кнопки соц. сетей сделать не через img, а через bg-image
       Описано в данной статье: https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img -->
-      <ul>
-        <li>
-          <a href="blank.html">
+      <ul class="social-media__list">
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html">
             <!-- Сделать через css иконку или svg -->
             <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети ВКонтакте">
           </a>
         </li>
-        <li>
-          <a href="blank.html">
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html">
             <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети facebook">
           </a>
         </li>
-        <li>
-          <a href="blank.html">
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html">
             <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети Instagram">
           </a>
         </li>
       </ul>
 
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social-discount">
+        <p class="social-discount__heading">Давайте дружить, это выгодно!</p>
+        <p class="social-discount__description">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </section>
   </footer>
 </body>
