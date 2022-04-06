@@ -177,6 +177,7 @@ img {
 .page-header__page-navigation {
   display: grid;
   grid-template-columns: auto 1fr min-content;
+  column-gap: 40px;
   width: 1160px;
   margin: 0 auto;
   padding-top: 50px;
@@ -281,7 +282,8 @@ img {
 
 .services__list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 100px;
   margin: 0;
   padding: 0;
 
@@ -313,7 +315,7 @@ img {
 
 .services__button {
   display: inline-block;
-  padding: 17px 40px 15px 39px;
+  padding: 16px 40px;
 }
 
 .services__img_green,
@@ -354,6 +356,7 @@ img {
 .about {
   display: grid;
   grid-template-columns: 1fr 360px;
+  column-gap: 40px;
 }
 
 .about__about-wrapper {
@@ -463,13 +466,15 @@ img {
   border-top: 2px solid var(--basic-grey);
   border-bottom: 2px solid var(--basic-grey);
 
-  padding: 88px 0;
+  padding: 23px 0;
   margin-bottom: 80px;
 }
 
 .clients__list {
   display: grid;
   grid-template-columns: 278px 298px 298px 278px;
+  align-items: center;
+  justify-items: center;
   margin: 0 auto;
   padding: 0;
 
@@ -477,7 +482,7 @@ img {
 }
 
 .clients__item {
-  text-align: center;
+  margin: 23px 0;
 }
 
 .clients__ref {
