@@ -110,9 +110,10 @@ img {
 /* Button */
 
 .button {
-  background-color: var(--accent-red);
-
+  display: inline-block;
   box-sizing: border-box;
+
+  background-color: var(--accent-red);
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -463,6 +464,7 @@ img {
   border-bottom: 2px solid var(--basic-grey);
 
   padding: 88px 0;
+  margin-bottom: 80px;
 }
 
 .clients__list {
@@ -499,14 +501,23 @@ img {
 /* Contacts */
 
 .contacts {
-  background-color: var(--basic-white);
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .address {
+  padding-top: 49px;
+  padding-left: 50px;
+  width: 319px;
+  height: 308px;
+
   font-style: normal;
+  background-color: var(--basic-white);
 }
 
 .address__heading {
+  margin-top: 0;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -521,6 +532,12 @@ img {
 
 .address__tel {
   text-decoration: none;
+}
+
+.contacts__button {
+  display: inline-block;
+  margin-top: 43px;
+  padding: 16px 44px;
 }
 
 /* Map */
