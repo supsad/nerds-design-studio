@@ -140,16 +140,16 @@ img {
   color: var(--text-button-active);
 }
 
-.button-grey {
+.button_grey {
   background-color: var(--basic-grey);
   color: var(--basic-black);
 }
 
-.button-grey:hover {
+.button_grey:hover {
   background-color: var(--basic-grey-hover);
 }
 
-.button-grey:active {
+.button_grey:active {
   background-color: var(--basic-grey-active);
 }
 
@@ -639,29 +639,86 @@ img {
   line-height: 55px;
 }
 
+/* layout catalog */
+
+.catalog-wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  column-gap: 140px;
+}
+
+.sites {
+  grid-column: 2 / -1;
+}
+
 /* Filters */
 
 .filters__fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
+.filters__fieldset_price {
+  margin-bottom: 54px;
+}
+
+.filters__fieldset_layout {
+  margin-bottom: 51px;
+}
+
+.filters__fieldset_features {
+  margin-bottom: 48px;
+}
+
 .filters__heading {
+  margin-bottom: 48px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
+.filters__heading_inner {
+  margin-bottom: 14px;
+}
+
 .filters__price-range {
   background-color: var(--basic-grey);
+  margin-bottom: 14px;
+
+  width: 260px;
+  height: 80px;
   border-radius: 3px;
+}
+
+input[type="range"] {
+  background-color: var(--basic-grey);
+
+  padding: 0;
+  border: none;
 }
 
 input[type="number"] {
   background-color: var(--basic-grey);
 
+  padding: 0;
+  margin-right: 33px;
+  width: 80px;
+  height: 38px;
   border-radius: 3px;
   border: none;
+}
+
+input[type="number"]:last-child {
+  margin: 0;
+}
+
+.filters__price-input {
+  /* In layout
+  margin-right: 11px; */
+  margin-right: 5px;
 }
 
 .filters__price-input,
@@ -672,16 +729,24 @@ input[type="number"] {
   text-transform: uppercase;
 }
 
-.filters__options-item {
-  list-style: none;
+.filters__options-list {
+  margin: 0;
+  padding: 0;
 
+  list-style: none;
   font-size: 16px;
   line-height: 20px;
   color: var(--extra-grey-300);
 }
 
+.filters__options-item {
+  margin-bottom: 17px;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
+  margin-right: 11px;
+
   color: var(--extra-grey-200);
   opacity: 40%;
 }
@@ -695,6 +760,10 @@ input[type="checkbox"]:hover {
 input[type="radio"]:disabled,
 input[type="checkbox"]:disabled {
   opacity: 30%;
+}
+
+.filters__button-grey {
+  padding: 16px 88px;
 }
 
 /* Sort */
@@ -739,9 +808,11 @@ input[type="checkbox"]:disabled {
 
 /* Sites */
 
-.sites__item {
+.sites__list {
   list-style: none;
+}
 
+.sites__item {
   background-color: var(--basic-grey-hover);
 }
 

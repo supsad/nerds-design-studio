@@ -57,237 +57,239 @@
 
 <main class="wrapper">
 
-  <section class="filters">
-    <h2>Фильтры</h2>
+  <div class="catalog-wrapper">
+    <section class="filters">
+      <h2>Фильтры</h2>
 
-    <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
-      <fieldset class="filters__fieldset">
-        <legend class="filters__heading">Стоимость:</legend>
+      <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="filters__fieldset filters__fieldset_price">
+          <legend class="filters__heading">Стоимость:</legend>
 
-        <div class="filters__price-range">
-          <label for="price-range">Диапазон стоимости</label>
-          <input type="range" name="price" id="price-range" min="0" max="200000"
-                 step="10000" value="150000">
-        </div>
+          <div class="filters__price-range">
+            <label for="price-range">Диапазон стоимости</label>
+            <input type="range" name="price" id="price-range" min="0" max="200000"
+                   step="10000" value="150000">
+          </div>
 
-        <label class="filters__price-input" for="price-from">От</label>
-        <input type="number" id="price-from" name="price-from" value="0">
+          <label class="filters__price-input" for="price-from">От</label>
+          <input type="number" id="price-from" name="price-from" value="0">
 
-        <label class="filters__price-input" for="price-to">До</label>
-        <input type="number" id="price-to" name="price-to" value="150000">
-      </fieldset>
+          <label class="filters__price-input" for="price-to">До</label>
+          <input type="number" id="price-to" name="price-to" value="150000">
+        </fieldset>
 
-      <fieldset class="filters__fieldset">
-        <legend class="filters__heading">Сетка:</legend>
-        <ul class="filters__options-list">
-          <li class="filters__options-item">
-            <label>
-              <input type="radio" name="layout" id="layout-adaptive" value="adaptive" checked>
-              Адаптивная
-            </label>
+        <fieldset class="filters__fieldset filters__fieldset_layout">
+          <legend class="filters__heading filters__heading_inner">Сетка:</legend>
+          <ul class="filters__options-list">
+            <li class="filters__options-item">
+              <label>
+                <input type="radio" name="layout" id="layout-adaptive" value="adaptive" checked>
+                Адаптивная
+              </label>
+            </li>
+            <li class="filters__options-item">
+              <label>
+                <input type="radio" name="layout" id="layout-fixed" value="fixed">
+                Фиксированная
+              </label>
+            </li>
+            <li class="filters__options-item">
+              <label>
+                <input type="radio" name="layout" id="layout-rubber" value="rubber">
+                Резиновая
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="filters__fieldset filters__fieldset_features">
+          <legend class="filters__heading filters__heading_inner">Особенности:</legend>
+
+          <ul class="filters__options-list">
+            <li class="filters__options-item">
+              <label>
+                <input type="checkbox" name="slider" id="features-slider" checked>
+                Слайдер
+              </label>
+            </li>
+            <li class="filters__options-item">
+              <label>
+                <input type="checkbox" name="advantage" id="features-advantage">
+                Блок преимуществ
+              </label>
+            </li>
+            <li class="filters__options-item">
+              <label>
+                <input type="checkbox" name="news" id="features-news" checked>
+                Новости
+              </label>
+            </li>
+            <li class="filters__options-item">
+              <label>
+                <input type="checkbox" name="gallery" id="features-galerry">
+                Галерея
+              </label>
+            </li>
+            <li class="filters__options-item">
+              <label>
+                <input type="checkbox" name="bag" id="features-bag">
+                Корзина
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <button class="button button_grey filters__button-grey" type="submit">Показать</button>
+      </form>
+    </section>
+
+    <section class="sort">
+      <h2>Сортировка</h2>
+
+      <p class="sort__heading">Сортировать:</p>
+
+      <form class="sort__form" action="https://echo.htmlacademy.ru" method="get">
+        <ul class="sort__list">
+          <li class="sort__item sort__item_active">
+            <button type="button" name="sort-list">По цене</button>
           </li>
-          <li class="filters__options-item">
-            <label>
-              <input type="radio" name="layout" id="layout-fixed" value="fixed">
-              Фиксированная
-            </label>
+          <li class="sort__item">
+            <button type="button" name="sort-list">По типу</button>
           </li>
-          <li class="filters__options-item">
-            <label>
-              <input type="radio" name="layout" id="layout-rubber" value="rubber">
-              Резиновая
-            </label>
+          <li class="sort__item">
+            <button type="button" name="sort-list">По названию</button>
           </li>
         </ul>
-      </fieldset>
 
-      <fieldset class="filters__fieldset">
-        <legend class="filters__heading">Особенности:</legend>
-
-        <ul class="filters__options-list">
-          <li class="filters__options-item">
-            <label>
-              <input type="checkbox" name="slider" id="features-slider" checked>
-              Слайдер
-            </label>
+        <ul class="sort__list-arrows">
+          <li class="sort__item-arrows sort__item-arrows_active">
+            <button type="button" name="sort-list-decrease">По убыванию</button>
           </li>
-          <li class="filters__options-item">
-            <label>
-              <input type="checkbox" name="advantage" id="features-advantage">
-              Блок преимуществ
-            </label>
-          </li>
-          <li class="filters__options-item">
-            <label>
-              <input type="checkbox" name="news" id="features-news" checked>
-              Новости
-            </label>
-          </li>
-          <li class="filters__options-item">
-            <label>
-              <input type="checkbox" name="gallery" id="features-galerry">
-              Галерея
-            </label>
-          </li>
-          <li class="filters__options-item">
-            <label>
-              <input type="checkbox" name="bag" id="features-bag">
-              Корзина
-            </label>
+          <li class="sort__item-arrows">
+            <button type="button" name="sort-list-increase">По возрастанию</button>
           </li>
         </ul>
-      </fieldset>
+      </form>
+    </section>
 
-      <button class="button-grey filters__button-grey" type="submit">Показать</button>
-    </form>
-  </section>
+    <section class="sites">
+      <h2>Список шаблонов</h2>
 
-  <section class="sort">
-    <h2>Сортировка</h2>
+      <!-- Подумать над тем, что нужно ли оборачивать блок с презентацией сайта в ссылку
+      или оставить только ссылку на название -->
+      <ul class="sites__list">
+        <li class="sites__item">
+          <!--          <svg>-->
+          <!--            <rect x="0" y="0" width="360" height="40"/>-->
+          <!--          </svg>-->
 
-    <p class="sort__heading">Сортировать:</p>
+          <img src="img/sites-list/sedona-opti.png" width="358" height="578" alt="Шаблон сайта Sedona">
 
-    <form class="sort__form" action="https://echo.htmlacademy.ru" method="get">
-      <ul class="sort__list">
-        <li class="sort__item sort__item_active">
-          <button type="button" name="sort-list">По цене</button>
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Sedona</a>
+            </h3>
+            <p class="sites__item-description">
+              Информационный сайт <br>
+              для туристов
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
+          </div>
         </li>
-        <li class="sort__item">
-          <button type="button" name="sort-list">По типу</button>
+
+        <li class="sites__item">
+          <img src="img/sites-list/pink-opti.png" width="358" height="578" alt="Шаблон сайта Pink App">
+
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Pink App</a>
+            </h3>
+            <p class="sites__item-description">
+              Продуктовый лендинг <br>
+              приложения для iOS и Android
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
+          </div>
         </li>
-        <li class="sort__item">
-          <button type="button" name="sort-list">По названию</button>
+
+        <li class="sites__item">
+          <img src="img/sites-list/barbershop-opti.png" width="358" height="578"
+               alt="Шаблон сайта Barbershop Borodinski">
+
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Barbershop</a>
+            </h3>
+            <p class="sites__item-description">
+              Сайт салона красоты. <br>
+              Для мужчин, да.
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
+          </div>
+        </li>
+
+        <li class="sites__item">
+          <img src="img/sites-list/mishka-opti.png" width="358" height="578" alt="Шаблон сайта Mishka">
+
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Mishka</a>
+            </h3>
+            <p class="sites__item-description">
+              Интернет-магазин <br>
+              вязаных игрушек
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
+          </div>
+        </li>
+
+        <li class="sites__item">
+          <img src="img/sites-list/aplus-opti.png" width="358" height="578" alt="Шаблон сайта A Plus">
+
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">A Plus</a>
+            </h3>
+            <p class="sites__item-description">
+              Лендинг курсов повышения <br>
+              квалификации
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
+          </div>
+        </li>
+
+        <li class="sites__item">
+          <img src="img/sites-list/kvast-opti.png" width="358" height="578" alt="Шаблон сайта Кваст">
+
+          <div class="sites__item-info">
+            <h3 class="sites__item-heading">
+              <a class="ref sites__item-heading-ref" href="#">Кваст</a>
+            </h3>
+            <p class="sites__item-description">
+              Промо-сайт производителя <br>
+              крафтового кваса
+            </p>
+            <a class="button sites__button" href="blank.html">9 900 Р</a>
+          </div>
         </li>
       </ul>
 
-      <ul class="sort__list-arrows">
-        <li class="sort__item-arrows sort__item-arrows_active">
-          <button type="button" name="sort-list-decrease">По убыванию</button>
+      <ul class="pagination sites__pagination">
+        <li class="pagination__item">
+          <a class="button button_grey pagination__button pagination__button_disabled">1</a>
         </li>
-        <li class="sort__item-arrows">
-          <button type="button" name="sort-list-increase">По возрастанию</button>
+        <li class="pagination__item">
+          <a class="button button_grey pagination__button" href="blank.html">2</a>
+        </li>
+        <li class="pagination__item">
+          <a class="button button_grey pagination__button" href="blank.html">3</a>
+        </li>
+        <li class="pagination__item">
+          <a class="button button_grey pagination__button pagination__button_next" href="blank.html">Следующая</a>
         </li>
       </ul>
-    </form>
-  </section>
-
-  <section class="sites">
-    <h2>Список шаблонов</h2>
-
-    <!-- Подумать над тем, что нужно ли оборачивать блок с презентацией сайта в ссылку
-    или оставить только ссылку на название -->
-    <ul class="sites__list">
-      <li class="sites__item">
-        <!--          <svg>-->
-        <!--            <rect x="0" y="0" width="360" height="40"/>-->
-        <!--          </svg>-->
-
-        <img src="img/sites-list/sedona-opti.png" width="358" height="578" alt="Шаблон сайта Sedona">
-
-        <div class="sites__item-info">
-          <h3 class="sites__item-heading">
-            <a class="ref sites__item-heading-ref" href="#">Sedona</a>
-          </h3>
-          <p class="sites__item-description">
-            Информационный сайт <br>
-            для туристов
-          </p>
-          <a class="button sites__button" href="blank.html">9 900 Р</a>
-        </div>
-      </li>
-
-      <li class="sites__item">
-        <img src="img/sites-list/pink-opti.png" width="358" height="578" alt="Шаблон сайта Pink App">
-
-        <div class="sites__item-info">
-          <h3 class="sites__item-heading">
-            <a class="ref sites__item-heading-ref" href="#">Pink App</a>
-          </h3>
-          <p class="sites__item-description">
-            Продуктовый лендинг <br>
-            приложения для iOS и Android
-          </p>
-          <a class="button sites__button" href="blank.html">9 900 Р</a>
-        </div>
-      </li>
-
-      <li class="sites__item">
-        <img src="img/sites-list/barbershop-opti.png" width="358" height="578"
-             alt="Шаблон сайта Barbershop Borodinski">
-
-        <div class="sites__item-info">
-          <h3 class="sites__item-heading">
-            <a class="ref sites__item-heading-ref" href="#">Barbershop</a>
-          </h3>
-          <p class="sites__item-description">
-            Сайт салона красоты. <br>
-            Для мужчин, да.
-          </p>
-          <a class="button sites__button" href="blank.html">9 900 Р</a>
-        </div>
-      </li>
-
-      <li class="sites__item">
-        <img src="img/sites-list/mishka-opti.png" width="358" height="578" alt="Шаблон сайта Mishka">
-
-        <div class="sites__item-info">
-          <h3 class="sites__item-heading">
-            <a class="ref sites__item-heading-ref" href="#">Mishka</a>
-          </h3>
-          <p class="sites__item-description">
-            Интернет-магазин <br>
-            вязаных игрушек
-          </p>
-          <a class="button sites__button" href="blank.html">9 900 Р</a>
-        </div>
-      </li>
-
-      <li class="sites__item">
-        <img src="img/sites-list/aplus-opti.png" width="358" height="578" alt="Шаблон сайта A Plus">
-
-        <div class="sites__item-info">
-          <h3 class="sites__item-heading">
-            <a class="ref sites__item-heading-ref" href="#">A Plus</a>
-          </h3>
-          <p class="sites__item-description">
-            Лендинг курсов повышения <br>
-            квалификации
-          </p>
-          <a class="button sites__button" href="blank.html">9 900 Р</a>
-        </div>
-      </li>
-
-      <li class="sites__item">
-        <img src="img/sites-list/kvast-opti.png" width="358" height="578" alt="Шаблон сайта Кваст">
-
-        <div class="sites__item-info">
-          <h3 class="sites__item-heading">
-            <a class="ref sites__item-heading-ref" href="#">Кваст</a>
-          </h3>
-          <p class="sites__item-description">
-            Промо-сайт производителя <br>
-            крафтового кваса
-          </p>
-          <a class="button sites__button" href="blank.html">9 900 Р</a>
-        </div>
-      </li>
-    </ul>
-
-    <ul class="pagination sites__pagination">
-      <li class="pagination__item">
-        <a class="button button_grey pagination__button pagination__button_disabled">1</a>
-      </li>
-      <li class="pagination__item">
-        <a class="button button_grey pagination__button" href="blank.html">2</a>
-      </li>
-      <li class="pagination__item">
-        <a class="button button_grey pagination__button" href="blank.html">3</a>
-      </li>
-      <li class="pagination__item">
-        <a class="button button_grey pagination__button pagination__button_next" href="blank.html">Следующая</a>
-      </li>
-    </ul>
-  </section>
+    </section>
+  </div>
 </main>
 
 <footer class="page-footer">
