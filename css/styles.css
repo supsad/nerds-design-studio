@@ -546,10 +546,40 @@ img {
   background-color: var(--light-grey-200);
 }
 
+.map__img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
 /* Social */
 
-.social-media__item {
+.social-media {
+  background-color: var(--basic-white);
+}
+
+.social-media__wrapper {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+
+  width: 1160px;
+  margin: 0 auto;
+  padding: 68px 0;
+}
+
+.social-media__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.social-media__item {
+  margin-right: 11px;
+}
+
+.social-media__item:last-child {
+  margin: 0;
 }
 
 .social-media__ref {
@@ -566,15 +596,19 @@ img {
 }
 
 .social-discount__heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
 }
 
 .social-discount__description {
+  margin: 0;
+
   font-size: 16px;
   line-height: 22px;
-
   color: var(--extra-grey-250);
 }
 
