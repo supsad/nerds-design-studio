@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 
+  <link rel="preload" href="fonts/roboto.woff2" as="font">
+  <link rel="preload" href="fonts/roboto.woff" as="font">
+
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
@@ -17,7 +20,7 @@
 <h1>Дизайн-студия Нёрдс</h1>
 
 <header class="page-header">
-  <nav class="main-navigation page-header__page-navigation">
+  <nav class="page-navigation page-header__page-navigation">
     <div class="page-header__wrapper-logo">
       <a class="logo page-header__logo page-header__logo_disabled">
         <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Логотип Нёрдс">
@@ -25,7 +28,7 @@
     </div>
     <ul class="page-navigation__list">
       <li class="page-navigation__item">
-        <a class="page-navigation__ref" href="blank.html">
+        <a class="ref page-navigation__ref" href="blank.html">
           Студия
         </a>
       </li>
@@ -46,7 +49,7 @@
       </li>
     </ul>
     <div class="page-header__wrapper-cart-bug">
-      <a class="page-header__cart-bug" href="blank.html">Корзина</a>
+      <a class="ref page-header__cart-bug" href="blank.html">Корзина</a>
     </div>
   </nav>
 </header>

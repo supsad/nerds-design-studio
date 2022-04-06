@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 
+  <link rel="preload" href="fonts/roboto.woff2" as="font">
+  <link rel="preload" href="fonts/roboto.woff" as="font">
+
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180x180 -->
@@ -14,40 +17,45 @@
 </head>
 <body>
 <header class="page-header">
-  <a href="index.html" class="logo page-header__logo">
-    <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Перейти на главную страницу сайта">
-  </a>
-  <nav class="main-navigation page-header__page-navigation">
+  <nav class="page-navigation page-header__page-navigation">
+    <div class="page-header__wrapper-logo">
+      <a href="index.html" class="logo page-header__logo">
+        <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Перейти на главную страницу сайта">
+      </a>
+    </div>
     <ul class="page-navigation__list">
       <li class="page-navigation__item">
-        <a class="page-navigation__ref" href="blank.html">
+        <a class="ref page-navigation__ref" href="blank.html">
           Студия
         </a>
       </li>
       <li class="page-navigation__item">
-        <a class="page-navigation__ref" href="blank.html">
+        <a class="ref page-navigation__ref" href="blank.html">
           Клиенты
         </a>
       </li>
       <li class="page-navigation__item">
-        <a class="page-navigation__ref page-navigation__ref_active" href="catalog.html">
+        <a class="ref page-navigation__ref page-navigation__ref_active" href="catalog.html">
           Магазин
         </a>
       </li>
       <li class="page-navigation__item">
-        <a class="page-navigation__ref" href="blank.html">
+        <a class="ref page-navigation__ref" href="blank.html">
           Контакты
         </a>
       </li>
     </ul>
     <div class="page-header__wrapper-cart-bug">
-      <a class="page-header__cart-bug" href="blank.html">Корзина</a>
+      <a class="ref page-header__cart-bug" href="blank.html">Корзина</a>
     </div>
   </nav>
 </header>
 
+<div class="heading-wrapper">
+  <h1 class="catalog-heading">Магазин готовых шаблонов</h1>
+</div>
+
 <main class="wrapper">
-  <h1>Магазин готовых шаблонов</h1>
 
   <section class="filters">
     <h2>Фильтры</h2>
@@ -293,11 +301,10 @@
         наб. Реки Карповки, <br>
         5 лит П, Санкт-Петербург
       </p>
-
       <a class="address__tel" href="tel:88005558628">+7 800 555-86-28</a>
-    </address>
 
-    <a class="button contacts__button" href="blank.html">Напишите нам</a>
+      <a class="button contacts__button" href="blank.html">Напишите нам</a>
+    </address>
   </section>
 
   <section class="map">
@@ -305,7 +312,7 @@
     <!-- Вставить карту -->
 
     <!-- Заглушка -->
-    <img src="img/map/map-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
+    <img class="map__img" src="img/map/map-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
   </section>
 
   <section class="social-media">
@@ -313,28 +320,30 @@
 
     <!-- Кнопки соц. сетей сделать не через img, а через bg-image
     Описано в данной статье: https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img -->
-    <ul class="social-media__list">
-      <li class="social-media__item">
-        <a class="social-media__ref" href="blank.html">
-          <!-- Сделать через css иконку или svg -->
-          <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети ВКонтакте">
-        </a>
-      </li>
-      <li class="social-media__item">
-        <a class="social-media__ref" href="blank.html">
-          <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети facebook">
-        </a>
-      </li>
-      <li class="social-media__item">
-        <a class="social-media__ref" href="blank.html">
-          <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети Instagram">
-        </a>
-      </li>
-    </ul>
+    <div class="social-media__wrapper">
+      <ul class="social-media__list">
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html">
+            <!-- Сделать через css иконку или svg -->
+            <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети ВКонтакте">
+          </a>
+        </li>
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html">
+            <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети facebook">
+          </a>
+        </li>
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html">
+            <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети Instagram">
+          </a>
+        </li>
+      </ul>
 
-    <div class="social-discount">
-      <p class="social-discount__heading">Давайте дружить, это выгодно!</p>
-      <p class="social-discount__description">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social-discount">
+        <p class="social-discount__heading">Давайте дружить, это выгодно!</p>
+        <p class="social-discount__description">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </div>
   </section>
 </footer>
