@@ -1,6 +1,6 @@
 {
   "icons": [
-  {"src": img/favicons/apple@6.png, "type": "image/png", "sizes": "192x192"},
-  {"src": img/favicons/apple@16.png, "type": "image/png", "sizes": "512x512"}
+  {"src": "img/favicons/apple@6.png", "type": "image/png", "sizes": "192x192"},
+  {"src": "img/favicons/apple@16.png", "type": "image/png", "sizes": "512x512"}
   ]
 }
