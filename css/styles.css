@@ -458,8 +458,24 @@ img {
 
 /* Clients */
 
+.clients__wrapper {
+  border-top: 2px solid var(--basic-grey);
+  border-bottom: 2px solid var(--basic-grey);
+
+  padding: 88px 0;
+}
+
 .clients__list {
+  display: grid;
+  grid-template-columns: 278px 298px 298px 278px;
+  margin: 0 auto;
+  padding: 0;
+
   list-style: none;
+}
+
+.clients__item {
+  text-align: center;
 }
 
 .clients__ref {
