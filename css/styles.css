@@ -117,6 +117,9 @@ img {
 
 .button {
   display: inline-block;
+  text-align: center;
+  /* inline-block vertical-align not working */
+  vertical-align: middle;
   box-sizing: border-box;
 
   background-color: var(--accent-red);
@@ -184,9 +187,9 @@ img {
   display: grid;
   grid-template-columns: auto 1fr min-content;
   column-gap: 40px;
-  width: 1160px;
+  width: 1170px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding: 50px 10px 0 10px;
 }
 
 .page-navigation__list {
@@ -224,8 +227,9 @@ img {
 
 
 .presentation__wrapper {
-  width: 1160px;
+  width: 1170px;
   margin: 0 auto;
+  padding: 0 10px
 }
 
 .presentation__slider {
@@ -257,11 +261,12 @@ img {
 }
 
 .slider__button {
-  grid-column: 1 / 5;
+  grid-column: 1;
   grid-row: 3 / 4;
 
-  width: 240px;
-  padding: 16px 54px;
+  z-index: 1;
+  min-width: 240px;
+  padding: 18px 54px 15px 54px;
   margin-bottom: 80px;
 }
 
@@ -270,13 +275,16 @@ img {
   grid-row: 1 / -1;
   margin: 0;
   padding: 0;
+  width: 760px;
+  height: 431px;
 }
 
 /* Main */
 
 .wrapper {
-  width: 1160px;
+  width: 1170px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 /* Services */
@@ -319,6 +327,8 @@ img {
 }
 
 .services__button {
+  max-width: 300px;
+  min-width: 160px;
   padding: 16px 40px;
 }
 
@@ -510,8 +520,9 @@ img {
 /* Contacts */
 
 .contacts {
-  width: 1160px;
+  width: 1170px;
   margin: 0 auto;
+  padding: 10px;
 }
 
 .address {
@@ -544,6 +555,8 @@ img {
 }
 
 .contacts__button {
+  max-width: 219px;
+
   margin-top: 43px;
   padding: 16px 44px;
 }
@@ -553,6 +566,8 @@ img {
 .map {
   background-color: var(--light-grey-200);
 }
+
+/* Plug map */
 
 .map__img {
   display: block;
@@ -570,9 +585,9 @@ img {
   display: grid;
   grid-template-columns: 440px 1fr;
 
-  width: 1160px;
+  width: 1170px;
   margin: 0 auto;
-  padding: 68px 0;
+  padding: 68px 10px;
 }
 
 .social-media__list {
@@ -629,9 +644,9 @@ img {
 }
 
 .catalog-heading {
-  width: 1160px;
+  width: 1170px;
   margin: 0 auto;
-  padding: 125px 0;
+  padding: 125px 10px;
   text-align: center;
 
   font-weight: 500;
@@ -765,6 +780,7 @@ input[type="checkbox"]:disabled {
 }
 
 .filters__button-grey {
+  max-width: 260px;
   padding: 16px 88px;
 }
 
@@ -857,6 +873,7 @@ input[type="checkbox"]:disabled {
 }
 
 .sites__button {
+  max-width: 320px;
   padding: 16px 72px;
 }
 
@@ -870,11 +887,13 @@ input[type="checkbox"]:disabled {
 }
 
 .pagination__button {
+  max-width: 260px;
   padding: 16px 20px;
   margin-right: 11px;
 }
 
 .pagination__button_next {
+  max-width: 260px;
   padding: 16px 78px;
   margin: 0;
 }
