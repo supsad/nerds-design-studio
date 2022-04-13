@@ -68,8 +68,11 @@
   --accent-yellow-hover: #EAB534;
   --accent-yellow-active: #E5A722;
 
+  --popup-light-grey: rgba(68, 68, 68, 0.5);
+
   --box-shadow-active: rgba(0, 1, 1, 0.1);
   --box-shadow-toggle: rgba(0, 0, 0, 0.15);
+  --box-shadow-popup: rgba(0, 0, 0, 0.4);
   --drop-shadow-black: rgba(0, 0, 0, 0.25);
   --text-button-active-white: rgba(255, 255, 255, 30%);
   --text-button-active-black: rgba(0, 0, 0, 30%);
@@ -647,6 +650,10 @@ img {
 
 /* Footer */
 
+.page-footer {
+  position: relative;
+}
+
 /* Contacts */
 
 .page-footer__contacts {
@@ -813,6 +820,104 @@ img {
   font-size: 16px;
   line-height: 22px;
   color: var(--extra-grey-250);
+}
+
+/* Popup */
+
+.page-footer__popup {
+  display: none;
+  position: fixed;
+  bottom: 10%;
+  left: 10%;
+  width: 960px;
+  height: 590px;
+  z-index: 10;
+  margin: 0 auto;
+
+  background-color: var(--basic-white);
+  box-shadow: 0 20px 40px var(--box-shadow-popup);
+}
+
+.page-footer__popup-wrapper {
+  padding: 63px 100px 84px 100px;
+}
+
+.page-footer__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-footer__popup-item {
+  width: 360px;
+  margin: 0 0 34px 0;
+}
+
+.page-footer__popup-item_wide {
+  width: 760px;
+  margin-bottom: 47px;
+}
+
+.page-footer__popup-heading {
+  margin: 0 0 37px 0;
+
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 53px;
+}
+
+.page-footer__popup-label {
+  display: block;
+  margin-bottom: 9px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.page-footer__popup-input {
+  width: 360px;
+  padding: 16px;
+}
+
+.page-footer__popup-message {
+  width: 760px;
+  height: 118px;
+  padding: 16px;
+  resize: none;
+}
+
+.page-footer__popup-input ,
+.page-footer__popup-message {
+  border: 2px solid var(--light-grey-100);
+  box-sizing: border-box;
+
+  color: var(--popup-light-grey);
+  background: transparent;
+  border-radius: 3px;
+}
+
+.page-footer__popup-input:hover ,
+.page-footer__popup-message:hover {
+  color: var(--light-grey-300);
+}
+
+.page-footer__popup-input:focus ,
+.page-footer__popup-message:focus {
+  border: 2px solid var(--basic-black);
+
+  color: var(--extra-grey-250);
+}
+
+.page-footer__popup-input:invalid ,
+.page-footer__popup-message:invalid {
+  border: 2px solid var(--accent-red-hover);
+
+  color: var(--accent-red-hover);
+}
+
+.button__popup {
+  padding: 16px 83px;
 }
 
 /* Catalog */
