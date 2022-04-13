@@ -149,6 +149,7 @@ img {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -180,6 +181,7 @@ img {
 .ref {
   color: var(--basic-black);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .ref:hover {
@@ -1087,8 +1089,9 @@ input[type="number"] {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  opacity: 30%;
   background-color: transparent;
+  opacity: 30%;
+  cursor: pointer;
 }
 
 .sort__item-button:hover {
