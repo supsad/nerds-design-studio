@@ -114,6 +114,22 @@ img {
   background-color: var(--basic-grey);
 }
 
+/* Hidden */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Button */
 
 .button {
@@ -236,8 +252,21 @@ img {
   padding-left: 40px;
 }
 
+.page-header__cart-bug::before {    /* Icon */
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 7px;
+  left: -40px;
+
+  background-image: url("../img/small-icons/cart_bug-opti.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .page-header__cart-bug {  /* For icon */
-  display: flex;
+  position: relative;
 }
 
 .page-header__logo:hover {
