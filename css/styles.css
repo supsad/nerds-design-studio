@@ -48,6 +48,7 @@
   --light-grey-200: #E0E0E0;
   --light-grey-250: #E1E1E1;
   --light-grey-300: #B4B9BB;
+  --light-grey-350: #ABABAB;
   --extra-grey-100: #666;
   --extra-grey-200: #4D4D4D;
   --extra-grey-250: #444;
@@ -68,6 +69,7 @@
   --accent-yellow-active: #E5A722;
 
   --box-shadow-active: rgba(0, 1, 1, 0.1);
+  --box-shadow-toggle: rgba(0, 0, 0, 0.15);
   --drop-shadow-black: rgba(0, 0, 0, 0.25);
   --text-button-active-white: rgba(255, 255, 255, 30%);
   --text-button-active-black: rgba(0, 0, 0, 30%);
@@ -851,11 +853,6 @@ img {
 /* Filters */
 
 .filters__fieldset {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   margin: 0;
   padding: 0;
   border: none;
@@ -888,42 +885,82 @@ img {
 
 .filters__price-range {
   width: 260px;
-  height: 80px;
+}
+
+.filters__range-controls {
+  position: relative;
+  height: 41px;
   margin-bottom: 14px;
+  padding: 39px 20px 0 20px;
 
   background-color: var(--basic-grey);
   border-radius: 3px;
 }
 
-.filters__fieldset_price input[type="range"] {
-  padding: 0;
-  border: none;
-
-  background-color: var(--basic-grey);
+.filters__range-scale {
+  height: 2px;
+  background-color: var(--light-grey-100);
 }
 
-.filters__fieldset_price input[type="number"] {
+.filters__scale-bar {
+  width: 70%;
+  height: 2px;
+
+  background-color: var(--accent-green);
+}
+
+.filters__price-toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+
+  background-color: var(--light-grey-350);
+  box-shadow: 0 2px 1px var(--box-shadow-toggle);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filters__price-toggle_min {
+  left: 18px;
+}
+
+.filters__price-toggle_max {
+  left: 160px;
+}
+
+.filters__price-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters__price-input-number {
   box-sizing: border-box;
   max-width: 80px;
   min-height: 38px;
-  padding: 0;
-  margin-right: 33px;
-
-  border-radius: 3px;
+  margin-left: 10px;
+  padding: 10px;
   border: none;
+  text-align: center;
+
   background-color: var(--basic-grey);
+  border-radius: 3px;
 }
 
-.filters__fieldset_price input[type="number"]:last-child {
+.filters__price-input-number:last-child {
   margin: 0;
 }
 
-.filters__price-input {
-  margin-right: 11px;
+.filters__price-input-label {
+  margin-right: 5px;
 }
 
-.filters__price-input,
-input[type="number"] {
+.filters__price-input-label ,
+.filters__price-input-number {
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
