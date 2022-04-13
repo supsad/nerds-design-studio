@@ -585,6 +585,15 @@ img {
   padding: 0;
 
   list-style: none;
+  background-image:
+    url("../img/small-icons/hr-client-opti.svg") ,
+    url("../img/small-icons/hr-client-opti.svg") ,
+    url("../img/small-icons/hr-client-opti.svg");
+  background-repeat: no-repeat;
+  background-position:
+    278px ,
+    center ,
+    874px;
 }
 
 .clients__item {
