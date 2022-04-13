@@ -66,16 +66,28 @@
           <legend class="filters__heading">Стоимость:</legend>
 
           <div class="filters__price-range">
-            <label for="price-range">Диапазон стоимости</label>
-            <input type="range" name="price" id="price-range" min="0" max="200000"
-                   step="10000" value="150000">
+            <div class="filters__range-controls">
+              <div class="filters__range-scale">
+                <div class="filters__scale-bar" style="
+                  width: 30%;
+                  margin-left: 20%;"></div>
+              </div>
+              <div class="filters__price-toggle filters__price-toggle_min" tabindex="0" style="left: 20%;"></div>
+              <div class="filters__price-toggle filters__price-toggle_max" tabindex="0" style="left: 50%;"></div>
+            </div>
+
+            <div class="filters__price-controls">
+              <div class="filters__price-controls-wrapper">
+                <label class="filters__price-input-label" for="price-from">От</label>
+                <input class="filters__price-input-number" type="text" id="price-from" name="price-from" value="0">
+              </div>
+
+              <div class="filters__price-controls-wrapper">
+                <label class="filters__price-input-label" for="price-to">До</label>
+                <input class="filters__price-input-number" type="text" id="price-to" name="price-to" value="150000">
+              </div>
+            </div>
           </div>
-
-          <label class="filters__price-input" for="price-from">От</label>
-          <input type="number" id="price-from" name="price-from" value="0">
-
-          <label class="filters__price-input" for="price-to">До</label>
-          <input type="number" id="price-to" name="price-to" value="150000">
         </fieldset>
 
         <fieldset class="filters__fieldset filters__fieldset_layout">
