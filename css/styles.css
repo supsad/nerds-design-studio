@@ -154,6 +154,7 @@ img {
 }
 
 .button_grey:active {
+  color: var(--text-button-active);
   background-color: var(--basic-grey-active);
 }
 
@@ -985,6 +986,10 @@ input[type="number"] {
 .sites__button {
   max-width: 320px;
   padding: 16px 72px;
+}
+
+.sites__button:active {
+  color: var(--basic-white);
 }
 
 /* Pagination */
