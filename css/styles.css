@@ -799,6 +799,8 @@ img {
 .social-media__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
 
@@ -809,7 +811,6 @@ img {
   flex-basis: 81px;
   flex-shrink: 0;
   margin-right: 11px;
-  margin-bottom: 10px;
 }
 
 .social-media__item:nth-child(4n),
