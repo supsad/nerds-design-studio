@@ -55,10 +55,10 @@
 </header>
 
 <section class="presentation">
-    <div class="presentation__wrapper">
+  <div class="presentation__wrapper">
     <h2 class="visually-hidden">Наша идеология</h2>
 
-    <div class="slider presentation__slider">
+    <div class="slider slider_current presentation__slider">
       <p class="slider__heading">
         Долго, дорого, <br>
         скрупулёзно.
@@ -110,9 +110,9 @@
     </div>
     <!-- Кнопки-переключатели слайдеров -->
     <div class="slider__switch">
-      <button class="slider__switch-button" type="button">1 слайд</button>
-      <button class="slider__switch-button" type="button">2 слайд</button>
-      <button class="slider__switch-button" type="button">3 слайд</button>
+      <button class="slider__switch-button slider__switch-button_current" type="button" aria-label="1 слайд"></button>
+      <button class="slider__switch-button" type="button" aria-label="2 слайд"></button>
+      <button class="slider__switch-button" type="button" aria-label="3 слайд"></button>
     </div>
   </div>
 </section>
@@ -326,7 +326,7 @@
     </div>
   </section>
 
-  <section class="page-footer__popup">
+  <section class="page-footer__popup page-footer__popup_active">
     <div class="page-footer__popup-wrapper">
       <h2 class="page-footer__popup-heading">Напишите нам</h2>
       <form class="page-footer__form" action="https://echo.htmlacademy.ru" method="post">
