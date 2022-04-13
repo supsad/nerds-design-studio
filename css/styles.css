@@ -243,6 +243,21 @@ img {
   grid-column: 1 / 2;
 }
 
+.page-navigation__item {
+  position: relative;
+}
+
+.page-navigation__ref_active::after {
+  content: "";
+  position: absolute;
+  top: 37px;
+  left: 1px;
+  width: 98%;
+  height: 2px;
+
+  background-color: var(--accent-red);
+}
+
 .page-header__wrapper-cart-bug {
   grid-column: 3 / 4;
 
@@ -266,6 +281,17 @@ img {
 
 .page-header__cart-bug {  /* For icon */
   position: relative;
+}
+
+.page-header__cart-bug_active::after {
+  content: "";
+  position: absolute;
+  top: 37px;
+  left: -40px;
+  width: calc(100% + 40px);
+  height: 2px;
+
+  background-color: var(--accent-red);
 }
 
 .page-header__logo:hover {
@@ -790,6 +816,8 @@ img {
 /* Catalog Heading */
 
 .heading-wrapper {
+  margin-bottom: 62px;
+
   background-color: var(--basic-grey);
 }
 
