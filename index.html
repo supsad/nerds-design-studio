@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<h1>Дизайн-студия Нёрдс</h1>
+<h1 class="visually-hidden">Дизайн-студия Нёрдс</h1>
 
 <header class="page-header">
   <nav class="page-navigation page-header__page-navigation">
@@ -55,10 +55,10 @@
 </header>
 
 <section class="presentation">
-    <div class="presentation__wrapper">
-    <h2>Наша идеология</h2>
+  <div class="presentation__wrapper">
+    <h2 class="visually-hidden">Наша идеология</h2>
 
-    <div class="slider presentation__slider">
+    <div class="slider slider_current presentation__slider">
       <p class="slider__heading">
         Долго, дорого, <br>
         скрупулёзно.
@@ -110,16 +110,16 @@
     </div>
     <!-- Кнопки-переключатели слайдеров -->
     <div class="slider__switch">
-      <button class="slider__switch-button" type="button">1 слайд</button>
-      <button class="slider__switch-button" type="button">2 слайд</button>
-      <button class="slider__switch-button" type="button">3 слайд</button>
+      <button class="slider__switch-button slider__switch-button_current" type="button" aria-label="1 слайд"></button>
+      <button class="slider__switch-button" type="button" aria-label="2 слайд"></button>
+      <button class="slider__switch-button" type="button" aria-label="3 слайд"></button>
     </div>
   </div>
 </section>
 
 <main class="wrapper">
   <section class="services">
-    <h2>Услуги</h2>
+    <h2 class="visually-hidden">Услуги</h2>
 
     <ul class="services__list">
       <li class="services__item">
@@ -159,7 +159,7 @@
   <hr class="separator wrapper__separator-services">
 
   <section class="about">
-    <h2>О компании</h2>
+    <h2 class="visually-hidden">О компании</h2>
 
     <div class="about-wrapper about__about-wrapper">
       <p class="about-wrapper__heading-first">
@@ -184,35 +184,40 @@
            alt="День рождения Нёрдс">
       <p class="about-data__heading-list">с 2004 года Любим точность во всем:</p>
       <dl class="about-data__advantages advantages">
-        <dt class="advantages__term">
-          Уровень <br>
-          самоотдачи
-        </dt>
-        <dd class="advantages__persentages">146
-          <span class="advantages__persentages-sup">%</span>
-        </dd>
+        <div class="advantages__wrapper">
+          <dt class="advantages__term">
+            Уровень <br>
+            самоотдачи
+          </dt>
+          <dd class="advantages__persentages">146
+            <span class="advantages__persentages-sup">%</span>
+          </dd>
+        </div>
 
-        <dt class="advantages__term">
-          Соблюдение <br>
-          сроков
-        </dt>
-        <dd class="advantages__persentages">100
-          <span class="advantages__persentages-sup">%</span>
-        </dd>
-
-        <dt class="advantages__term">
-          Минимальная <br>
-          предоплата
-        </dt>
-        <dd class="advantages__persentages">50
-          <span class="advantages__persentages-sup">%</span>
-        </dd>
+        <div class="advantages__wrapper">
+          <dt class="advantages__term">
+            Соблюдение <br>
+            сроков
+          </dt>
+          <dd class="advantages__persentages">100
+            <span class="advantages__persentages-sup">%</span>
+          </dd>
+        </div>
+        <div class="advantages__wrapper">
+          <dt class="advantages__term">
+            Минимальная <br>
+            предоплата
+          </dt>
+          <dd class="advantages__persentages">50
+            <span class="advantages__persentages-sup">%</span>
+          </dd>
+        </div>
       </dl>
     </div>
   </section>
 
   <section class="clients">
-    <h2>Клиенты</h2>
+    <h2 class="visually-hidden">Клиенты</h2>
 
     <div class="clients__wrapper">
       <ul class="clients__list">
@@ -247,7 +252,7 @@
 
 <footer class="page-footer">
   <section class="contacts page-footer__contacts">
-    <h2>Контакты</h2>
+    <h2 class="visually-hidden">Контакты</h2>
 
     <address class="address contacts__address">
       <p class="address__heading">NЁRDS DESIGN STUDIO</p>
@@ -256,14 +261,14 @@
         наб. Реки Карповки, <br>
         5 лит П, Санкт-Петербург
       </p>
-        <a class="address__tel" href="tel:88005558628">+7 800 555-86-28</a>
+      <a class="address__tel" href="tel:88005558628">+7 800 555-86-28</a>
 
       <a class="button contacts__button" href="blank.html">Напишите нам</a>
     </address>
   </section>
 
   <section class="map">
-    <h2>Местоположение</h2>
+    <h2 class="visually-hidden">Местоположение</h2>
     <!-- Вставить карту -->
 
     <!-- Заглушка -->
@@ -271,7 +276,7 @@
   </section>
 
   <section class="social-media">
-    <h2>Социальные сети</h2>
+    <h2 class="visually-hidden">Социальные сети</h2>
 
     <!-- Кнопки соц. сетей сделать не через img, а через bg-image
     Описано в данной статье: https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img -->
@@ -280,17 +285,37 @@
         <li class="social-media__item">
           <a class="social-media__ref" href="blank.html">
             <!-- Сделать через css иконку или svg -->
-            <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети ВКонтакте">
+            <span class="visually-hidden">ВКонтакте</span>
+            <svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534
+                1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244
+                1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621
+                1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664
+                0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16
+                1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54
+                3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203
+                10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419Z"
+                    fill="#fff"/>
+            </svg>
           </a>
         </li>
         <li class="social-media__item">
           <a class="social-media__ref" href="blank.html">
-            <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети facebook">
+            <span class="visually-hidden">Фейсбук</span>
+            <svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4Z" fill="#fff"/>
+            </svg>
           </a>
         </li>
         <li class="social-media__item">
           <a class="social-media__ref" href="blank.html">
-            <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети Instagram">
+            <span class="visually-hidden">Инстаграм</span>
+            <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15c1.65 0 3 1.35 3 3v15c0
+                1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3Zm11 10.5C14 8.57 12.43 7 10.5 7S7 8.57 7
+                10.5 8.57 14 10.5 14s3.5-1.57 3.5-3.5ZM3 18V9h1.181c-.118.491-.18.995-.181 1.5a6.5 6.5 0 1 0 13 0
+                6.451 6.451 0 0 0-.181-1.5H18v9H3ZM14 7h4V3h-4v4Z" fill="#fff"/>
+            </svg>
           </a>
         </li>
       </ul>
@@ -299,6 +324,31 @@
         <p class="social-discount__heading">Давайте дружить, это выгодно!</p>
         <p class="social-discount__description">Скидка 10% для друзей из социальных сетей.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="page-footer__popup page-footer__popup_active">
+    <div class="page-footer__popup-wrapper">
+      <h2 class="page-footer__popup-heading">Напишите нам</h2>
+      <form class="page-footer__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="page-footer__popup-item">
+          <label class="page-footer__popup-label" for="popup-username">Ваше имя:</label>
+          <input class="page-footer__popup-input" type="text" name="popup-username" id="popup-username"
+                 placeholder="Имя Фамилия" required>
+        </p>
+        <p class="page-footer__popup-item">
+          <label class="page-footer__popup-label" for="popup-email">Ваш email:</label>
+          <input class="page-footer__popup-input" type="email" name="popup-email" id="popup-email"
+                 placeholder="email@example.com " required>
+        </p>
+        <p class="page-footer__popup-item page-footer__popup-item_wide">
+          <label class="page-footer__popup-label" for="popup-message">Текст письма:</label>
+          <textarea class="page-footer__popup-message" name="popup-message" id="popup-message"
+                    placeholder="В свободной форме" required></textarea>
+        </p>
+
+        <button class="button button__popup" type="submit">Отправить</button>
+      </form>
     </div>
   </section>
 </footer>
