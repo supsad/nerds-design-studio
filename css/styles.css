@@ -859,17 +859,17 @@ img {
 
 .social-media__wrapper {
   display: grid;
-  grid-template-columns: 400px 1fr 1fr;
+  grid-template-columns: 360px 1fr 1fr;
   column-gap: 40px;
   width: 1240px;
   margin: 0 auto;
-  padding: 68px 40px;
+  padding: 68px 40px 59px;
 }
 
 .social-media__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -880,12 +880,13 @@ img {
 .social-media__item {
   flex-basis: 81px;
   flex-shrink: 0;
-  margin-right: 11px;
+  margin-right: 9px;
+  margin-bottom: 9px;
 }
 
 .social-media__item:nth-child(4n),
 .social-media__item:last-child {
-  margin: 0;
+  margin-right: 0;
 }
 
 .social-media__ref {
@@ -919,6 +920,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 9px;
 }
 
 .social-discount__heading {
