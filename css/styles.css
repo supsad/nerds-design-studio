@@ -257,8 +257,8 @@ img {
 .page-navigation__ref_active::after {
   content: "";
   position: absolute;
-  top: 37px;
-  left: 1px;
+  top: 43px;
+  left: 0;
   width: 98%;
   height: 2px;
 
@@ -293,7 +293,7 @@ img {
 .page-header__cart-bug_active::after {
   content: "";
   position: absolute;
-  top: 37px;
+  top: 43px;
   left: -40px;
   width: calc(100% + 40px);
   height: 2px;
@@ -1074,7 +1074,7 @@ img {
 /* Catalog Heading */
 
 .heading-wrapper {
-  margin-bottom: 62px;
+  margin-bottom: 55px;
 
   background-color: var(--basic-grey);
 }
@@ -1082,7 +1082,7 @@ img {
 .catalog-heading {
   width: 1240px;
   margin: 0 auto;
-  padding: 125px 40px;
+  padding: 78px 40px 108px;
   text-align: center;
 
   font-weight: 500;
@@ -1113,15 +1113,15 @@ img {
 }
 
 .filters__fieldset_price {
-  margin-bottom: 54px;
+  margin-bottom: 55px;
 }
 
 .filters__fieldset_layout {
-  margin-bottom: 51px;
+  margin-bottom: 50px;
 }
 
 .filters__fieldset_features {
-  margin-bottom: 48px;
+  margin-bottom: 53px;
 }
 
 .filters__heading {
@@ -1143,7 +1143,7 @@ img {
 
 .filters__range-controls {
   position: relative;
-  height: 41px;
+  height: 80px;
   margin-bottom: 14px;
   padding: 39px 20px 0 20px;
 
@@ -1167,8 +1167,8 @@ img {
   position: absolute;
   top: 30px;
   left: 0;
-  width: 4px;
-  height: 4px;
+  width: 20px;
+  height: 20px;
   padding: 0;
   border: 8px solid var(--basic-white);
 
@@ -1196,7 +1196,7 @@ img {
   max-width: 80px;
   min-height: 38px;
   margin-left: 10px;
-  padding: 10px;
+  padding: 8px 10px;
   border: none;
   text-align: center;
 
@@ -1209,7 +1209,7 @@ img {
 }
 
 .filters__price-input-label {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .filters__price-input-label,
@@ -1233,7 +1233,7 @@ img {
 .filters__options-item {
   display: flex;
   align-items: center;
-  margin-bottom: 17px;
+  margin-bottom: 19px;
 }
 
 .filters__options-item:last-child {
@@ -1253,26 +1253,17 @@ img {
   position: absolute;
   top: -3px;
   left: -36px;
-  width: 17px;
-  height: 17px;
-  border: 3px solid var(--extra-grey-200);
-
-  opacity: 40%;
-  border-radius: 3px;
-}
-
-.filters__item-input-checkbox:checked + .filters__item-input-label::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -36px;
   width: 25px;
   height: 23px;
 
-  background-image: url("../img/small-icons/checkbox-on-opti.svg");
+  background-image: url("../img/small-icons/checkbox-full-opti.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 40%;
+}
+
+.filters__item-input-checkbox:checked + .filters__item-input-label::before {
+  background-position: -33px 0;
 }
 
 .filters__item-input-radio + .filters__item-input-label::before {
@@ -1280,26 +1271,17 @@ img {
   position: absolute;
   top: -3px;
   left: -36px;
-  width: 17px;
-  height: 17px;
-  border: 4px solid var(--extra-grey-200);
-
-  opacity: 40%;
-  border-radius: 50%;
-}
-
-.filters__item-input-radio:checked + .filters__item-input-label::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -36px;
   width: 25px;
   height: 25px;
 
-  background-image: url("../img/small-icons/radio-on-opti.svg");
+  background-image: url("../img/small-icons/radio-full-opti.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 40%;
+}
+
+.filters__item-input-radio:checked + .filters__item-input-label::before {
+  background-position: -35px 0;
 }
 
 .filters__item-input-checkbox + .filters__item-input-label:hover::before,
@@ -1431,7 +1413,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 72px 40px;
   margin-top: 0;
-  margin-bottom: 54px;
+  margin-bottom: 59px;
   padding: 0;
 
   list-style: none;
@@ -1498,8 +1480,8 @@ img {
   bottom: -3px;
   left: 0;
   width: 360px;
-  height: 161px;
-  padding-top: 26px;
+  height: 231px;
+  padding-top: 28px;
   padding-bottom: 44px;
   text-align: center;
 
@@ -1519,7 +1501,7 @@ img {
 
 .sites__item-description {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 
   font-size: 16px;
   line-height: 18px;
@@ -1553,7 +1535,7 @@ img {
 
 .pagination__button_next {
   max-width: 260px;
-  padding: 16px 78px;
+  padding: 16px 81px;
   margin: 0;
 }
 
