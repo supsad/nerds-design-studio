@@ -376,21 +376,50 @@ img {
   margin-bottom: 80px;
 }
 
-.slider__img {
-  grid-column: 5 / -1;
-  grid-row: 1 / -1;
-
-  margin: 0;
-  padding: 0;
+.slider_first::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 43px;
   width: 760px;
   height: 431px;
+
+  background-image: url("../img/slider/index-smartphones-opti.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.slider_second::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 43px;
+  width: 760px;
+  height: 431px;
+
+  background-image: url("../img/slider/index-smartphones-opti.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.slider_third::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 43px;
+  width: 760px;
+  height: 431px;
+
+  background-image: url("../img/slider/index-smartphones-opti.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .slider__switch {
   position: absolute;
   display: flex;
-  bottom: 96px;
-  left: 536px;
+  bottom: 95px;
+  left: 575px;
 }
 
 .slider__switch-button {
