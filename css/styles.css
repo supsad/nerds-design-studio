@@ -1114,7 +1114,7 @@ img {
 
 .filters__range-controls {
   position: relative;
-  height: 41px;
+  height: 80px;
   margin-bottom: 14px;
   padding: 39px 20px 0 20px;
 
@@ -1138,8 +1138,8 @@ img {
   position: absolute;
   top: 30px;
   left: 0;
-  width: 4px;
-  height: 4px;
+  width: 20px;
+  height: 20px;
   padding: 0;
   border: 8px solid var(--basic-white);
 
