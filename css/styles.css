@@ -397,7 +397,7 @@ img {
   width: 760px;
   height: 431px;
 
-  background-image: url("../img/slider/index-smartphones-opti.png");
+  background-image: url("../img/slider/index_monoblocks-opti.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -410,7 +410,7 @@ img {
   width: 760px;
   height: 431px;
 
-  background-image: url("../img/slider/index-smartphones-opti.png");
+  background-image: url("../img/slider/index-tablet-opti.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -477,12 +477,40 @@ img {
   list-style: none;
 }
 
-.services__img {
+.services__item_first::before {
+  content: "";
+  display: block;
   width: 300px;
   height: 146px;
   margin-bottom: 25px;
 
-  background-color: var(--accent-red);
+  background-image: url("../img/services/computer-opti.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.services__item_second::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 146px;
+  margin-bottom: 25px;
+
+  background-image: url("../img/services/smartphone-opti.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.services__item_third::before {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 146px;
+  margin-bottom: 25px;
+
+  background-image: url("../img/services/presentation-opti.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .services__heading {
