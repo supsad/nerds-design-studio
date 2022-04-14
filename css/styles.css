@@ -1469,8 +1469,8 @@ img {
   bottom: -3px;
   left: 0;
   width: 360px;
-  height: 161px;
-  padding-top: 26px;
+  height: 231px;
+  padding-top: 28px;
   padding-bottom: 44px;
   text-align: center;
 
@@ -1490,7 +1490,7 @@ img {
 
 .sites__item-description {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 
   font-size: 16px;
   line-height: 18px;
