@@ -713,7 +713,7 @@ img {
 /* Clients */
 
 .clients__wrapper {
-  padding: 23px 0;
+  padding: 23px 0 14px;
   margin-bottom: 80px;
   border-top: 2px solid var(--basic-grey);
   border-bottom: 2px solid var(--basic-grey);
@@ -721,7 +721,7 @@ img {
 
 .clients__list {
   display: grid;
-  grid-template-columns: 278px 298px 298px 278px;
+  grid-template-columns: 264px 336px 261px 339px;
   align-items: center;
   justify-items: center;
   margin: 0 auto;
@@ -732,9 +732,9 @@ img {
   url("../img/small-icons/hr-client-opti.svg"),
   url("../img/small-icons/hr-client-opti.svg");
   background-repeat: no-repeat;
-  background-position: 278px,
+  background-position: 279px,
   center,
-  874px;
+  879px;
 }
 
 .clients__item {
