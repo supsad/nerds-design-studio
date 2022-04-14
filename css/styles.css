@@ -589,7 +589,7 @@ img {
 }
 
 .about-wrapper__description {
-  margin-bottom: 37px;
+  margin-bottom: 40px;
 }
 
 .about-wrapper__heading-second {
@@ -611,7 +611,7 @@ img {
 
 .about-wrapper__item {
   position: relative;
-  margin-bottom: 33px;
+  margin-bottom: 24px;
 }
 
 .about-wrapper__item::before {
@@ -635,13 +635,16 @@ img {
 
 /* About data */
 
-.about-data__img {
+.about-data::before {
+  content: "";
+  display: block;
   width: 360px;
   height: 208px;
   margin-bottom: 37px;
 
-  background: linear-gradient(to bottom right,
-  var(--accent-red), var(--accent-yellow), var(--accent-green));
+  background-image: url("../img/logo/nerds-birthday-opti.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .about-data__heading-list {
@@ -663,7 +666,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   margin: 0;
 }
 
@@ -671,6 +674,11 @@ img {
   display: flex;
   flex-direction: column-reverse;
   flex-basis: 100px;
+  margin-right: 19px;
+}
+
+.advantages__wrapper:last-child {
+  margin-right: 0;
 }
 
 .advantages__term {
