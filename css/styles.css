@@ -1224,26 +1224,17 @@ img {
   position: absolute;
   top: -3px;
   left: -36px;
-  width: 17px;
-  height: 17px;
-  border: 3px solid var(--extra-grey-200);
-
-  opacity: 40%;
-  border-radius: 3px;
-}
-
-.filters__item-input-checkbox:checked + .filters__item-input-label::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -36px;
   width: 25px;
   height: 23px;
 
-  background-image: url("../img/small-icons/checkbox-on-opti.svg");
+  background-image: url("../img/small-icons/checkbox-full-opti.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 40%;
+}
+
+.filters__item-input-checkbox:checked + .filters__item-input-label::before {
+  background-position: -33px 0;
 }
 
 .filters__item-input-radio + .filters__item-input-label::before {
@@ -1251,26 +1242,17 @@ img {
   position: absolute;
   top: -3px;
   left: -36px;
-  width: 17px;
-  height: 17px;
-  border: 4px solid var(--extra-grey-200);
-
-  opacity: 40%;
-  border-radius: 50%;
-}
-
-.filters__item-input-radio:checked + .filters__item-input-label::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -36px;
   width: 25px;
   height: 25px;
 
-  background-image: url("../img/small-icons/radio-on-opti.svg");
+  background-image: url("../img/small-icons/radio-full-opti.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 40%;
+}
+
+.filters__item-input-radio:checked + .filters__item-input-label::before {
+  background-position: -35px 0;
 }
 
 .filters__item-input-checkbox + .filters__item-input-label:hover::before,
