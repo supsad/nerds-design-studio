@@ -1402,7 +1402,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 72px 40px;
   margin-top: 0;
-  margin-bottom: 54px;
+  margin-bottom: 59px;
   padding: 0;
 
   list-style: none;
@@ -1524,7 +1524,7 @@ img {
 
 .pagination__button_next {
   max-width: 260px;
-  padding: 16px 78px;
+  padding: 16px 81px;
   margin: 0;
 }
 
