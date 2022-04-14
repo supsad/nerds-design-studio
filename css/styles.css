@@ -1045,7 +1045,7 @@ img {
 /* Catalog Heading */
 
 .heading-wrapper {
-  margin-bottom: 62px;
+  margin-bottom: 55px;
 
   background-color: var(--basic-grey);
 }
@@ -1053,7 +1053,7 @@ img {
 .catalog-heading {
   width: 1240px;
   margin: 0 auto;
-  padding: 125px 40px;
+  padding: 78px 40px 108px;
   text-align: center;
 
   font-weight: 500;
