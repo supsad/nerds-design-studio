@@ -85,6 +85,10 @@
 
 /* Standard */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -96,14 +100,11 @@ body {
   align-content: start;
 
   font-family: "Roboto", "Arial", sans-serif;
-  background-color: var(--basic-white);
-}
-
-.wrapper {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 img {
@@ -113,7 +114,7 @@ img {
 }
 
 .separator {
-  width: 1158px;
+  width: 1160px;
   height: 2px;
   margin: 0 auto;
   padding: 0;
@@ -142,10 +143,8 @@ img {
 
 .button {
   display: inline-block;
-  box-sizing: border-box;
   border: none;
   text-align: center;
-  /* inline-block vertical-align not working */
   vertical-align: middle;
 
   font-weight: 500;
@@ -213,18 +212,21 @@ img {
   display: grid;
   grid-template-columns: auto 1fr min-content;
   column-gap: 40px;
-  width: 1170px;
-  margin: 0 auto;
-  padding: 50px 10px 0 10px;
+  width: 1240px;
+  height: 66px;
+  margin: 49px auto 0;
+  padding: 0 40px;
 }
 
 .page-navigation__list {
   grid-column: 2 / 3;
 
+  position: relative;
+  left: -22px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   /* gap 80+% supports browsers */
   gap: 10px 45px;
   margin: 0;
@@ -233,15 +235,10 @@ img {
   list-style: none;
 }
 
-/* TODO idk this solution */
-/* .page-navigation__item {
-  margin-right: 45px;
+.page-navigation__list,
+.page-header__cart-bug {
+  margin-top: 8px;
 }
-
-.page-navigation__item:last-child ,
-.page-navigation__item:nth-child(7n) {
-  margin-right: 0;
-} */
 
 .logo {
   width: 160px;
@@ -254,6 +251,7 @@ img {
 
 .page-navigation__item {
   position: relative;
+  /*padding-top: 8px;*/
 }
 
 .page-navigation__ref_active::after {
@@ -325,9 +323,9 @@ img {
 
 .presentation__wrapper {
   position: relative;
-  width: 1170px;
+  width: 1240px;
   margin: 0 auto;
-  padding: 0 10px
+  padding: 0 40px
 }
 
 .presentation__slider {
@@ -429,9 +427,9 @@ img {
 /* Main */
 
 .wrapper {
-  width: 1170px;
+  width: 1240px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 40px;
 }
 
 /* Services */
@@ -704,9 +702,9 @@ img {
 
 .page-footer__contacts {
   position: relative;
-  width: 1170px;
-  padding: 0 10px;
+  width: 1240px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .contacts__address {
@@ -792,9 +790,9 @@ img {
   display: grid;
   grid-template-columns: 400px 1fr 1fr;
   column-gap: 40px;
-  width: 1170px;
+  width: 1240px;
   margin: 0 auto;
-  padding: 68px 10px;
+  padding: 68px 40px;
 }
 
 .social-media__list {
@@ -940,7 +938,6 @@ img {
 .page-footer__popup-input,
 .page-footer__popup-message {
   border: 2px solid var(--light-grey-100);
-  box-sizing: border-box;
 
   color: var(--popup-light-grey);
   background: transparent;
@@ -981,9 +978,9 @@ img {
 }
 
 .catalog-heading {
-  width: 1170px;
+  width: 1240px;
   margin: 0 auto;
-  padding: 125px 10px;
+  padding: 125px 40px;
   text-align: center;
 
   font-weight: 500;
@@ -1094,7 +1091,6 @@ img {
 }
 
 .filters__price-input-number {
-  box-sizing: border-box;
   max-width: 80px;
   min-height: 38px;
   margin-left: 10px;
