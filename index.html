@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Дизайн-студия "Нёрдс"</title>
+  <title>Дизайн-студия NЁRDS</title>
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -58,24 +58,19 @@
   <div class="presentation__wrapper">
     <h2 class="visually-hidden">Наша идеология</h2>
 
-    <div class="slider slider_current presentation__slider">
+    <div class="slider slider_first presentation__slider slider_current">
       <p class="slider__heading">
         Долго, дорого, <br>
-        скрупулёзно.
+        скрупулезно.
       </p>
       <p class="slider__description">
         Математически выверенный дизайн <br>
         для вашего сайта или мобильного приложения.
       </p>
       <a class="button slider__button" href="blank.html">Узнать больше</a>
-
-      <figure class="slider__img">
-        <img src="img/slider/index-smartphones-opti.png" width="760" height="431"
-             alt="Телефоны с одним из наших приложений">
-      </figure>
     </div>
 
-    <div class="slider presentation__slider">
+    <div class="slider slider_second presentation__slider">
       <p class="slider__heading">
         Любим математику <br>
         как никто другой
@@ -85,14 +80,9 @@
         для расчета идеальных пропорций
       </p>
       <a class="button slider__button" href="blank.html">Узнать больше</a>
-
-      <figure class="slider__img">
-        <img src="img/slider/index_monoblocks-opti.png" width="760" height="431"
-             alt="Моноблок с одним из наших предложений">
-      </figure>
     </div>
 
-    <div class="slider presentation__slider">
+    <div class="slider slider_third presentation__slider">
       <p class="slider__heading">
         Только ночь, <br>
         только хардкор
@@ -102,11 +92,6 @@
         Ближе к полуночи работа только начинается.
       </p>
       <a class="button slider__button" href="blank.html">Узнать больше</a>
-
-      <figure class="slider__img">
-        <img src="img/slider/index-tablet-opti.png" width="760" height="431"
-             alt="Планшет и смартфон с одним из наших приложений">
-      </figure>
     </div>
     <!-- Кнопки-переключатели слайдеров -->
     <div class="slider__switch">
@@ -122,10 +107,7 @@
     <h2 class="visually-hidden">Услуги</h2>
 
     <ul class="services__list">
-      <li class="services__item">
-        <!-- Подумать над тем сделать их через стили или нет (возможно, как контентная, так и декоративная) -->
-        <img class="services__img" src="img/services/computer-opti.png" width="300" height="146"
-             alt="Ноутбук с веб-сайтом">
+      <li class="services__item services__item_first">
         <h3 class="services__heading">Веб-сайты</h3>
         <p class="services__description">
           Мир никогда не будет прежним <br>
@@ -133,9 +115,7 @@
         </p>
         <a class="button services__button" href="catalog.html">Заказать</a>
       </li>
-      <li class="services__item">
-        <img class="services__img services__img_green" src="img/services/smartphone-opti.png" width="300" height="146"
-             alt="Смартфон с приложением">
+      <li class="services__item services__item_second">
         <h3 class="services__heading">Приложения</h3>
         <p class="services__description">
           Покорите топ-10 приложений <br>
@@ -143,9 +123,7 @@
         </p>
         <a class="button services__button services__button_green" href="catalog.html">Заказать</a>
       </li>
-      <li class="services__item">
-        <img class="services__img services__img_yellow" src="img/services/presentation-opti.png" width="300"
-             height="146" alt="Холст с презентацией">
+      <li class="services__item services__item_third">
         <h3 class="services__heading">Презентации</h3>
         <p class="services__description">
           Вы даже не подозреваете, <br>
@@ -178,10 +156,7 @@
       </ul>
     </div>
 
-    <!-- Подумать над тем сделать их через стили или нет (возможно, как контентная, так и декоративная) -->
     <div class="about-data about__about-data">
-      <img class="about-data__img" src="img/logo/nerds-birthday-opti.png" width="360" height="208"
-           alt="День рождения Нёрдс">
       <p class="about-data__heading-list">с 2004 года Любим точность во всем:</p>
       <dl class="about-data__advantages advantages">
         <div class="advantages__wrapper">
@@ -272,19 +247,16 @@
     <!-- Вставить карту -->
 
     <!-- Заглушка -->
-    <img class="map__img" src="img/map/map-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
+    <img class="map__img" src="img/map/map-n-marker-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
   </section>
 
   <section class="social-media">
     <h2 class="visually-hidden">Социальные сети</h2>
 
-    <!-- Кнопки соц. сетей сделать не через img, а через bg-image
-    Описано в данной статье: https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img -->
     <div class="social-media__wrapper">
       <ul class="social-media__list">
         <li class="social-media__item">
           <a class="social-media__ref" href="blank.html">
-            <!-- Сделать через css иконку или svg -->
             <span class="visually-hidden">ВКонтакте</span>
             <svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534
@@ -327,8 +299,9 @@
     </div>
   </section>
 
-  <section class="page-footer__popup page-footer__popup_active">
+  <section class="page-footer__popup page-footer__popup_disabled">
     <div class="page-footer__popup-wrapper">
+      <button class="page-footer__popup-close" type="button" aria-label="Закрыть"></button>
       <h2 class="page-footer__popup-heading">Напишите нам</h2>
       <form class="page-footer__form" action="https://echo.htmlacademy.ru" method="post">
         <p class="page-footer__popup-item">

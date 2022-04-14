@@ -326,19 +326,16 @@
     <!-- Вставить карту -->
 
     <!-- Заглушка -->
-    <img class="map__img" src="img/map/map-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
+    <img class="map__img" src="img/map/map-n-marker-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
   </section>
 
   <section class="social-media">
     <h2 class="visually-hidden">Социальные сети</h2>
 
-    <!-- Кнопки соц. сетей сделать не через img, а через bg-image
-    Описано в данной статье: https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img -->
     <div class="social-media__wrapper">
       <ul class="social-media__list">
         <li class="social-media__item">
           <a class="social-media__ref" href="blank.html">
-            <!-- Сделать через css иконку или svg -->
             <span class="visually-hidden">ВКонтакте</span>
             <svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534
@@ -381,8 +378,9 @@
     </div>
   </section>
 
-  <section class="page-footer__popup page-footer__popup_active">
+  <section class="page-footer__popup page-footer__popup_disabled">
     <div class="page-footer__popup-wrapper">
+      <button class="page-footer__popup-close" type="button" aria-label="Закрыть"></button>
       <h2 class="page-footer__popup-heading">Напишите нам</h2>
       <form class="page-footer__form" action="https://echo.htmlacademy.ru" method="post">
         <p class="page-footer__popup-item">
