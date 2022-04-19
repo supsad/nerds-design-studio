@@ -930,14 +930,14 @@ img {
   background-position: -35px 0;
 }
 
+.filters__item-checkbox:focus + .filters__item-label::before,
+.filters__item-checkbox:focus:checked + .filters__item-label::after,
+.filters__item-radio:focus + .filters__item-label::before,
+.filters__item-radio:focus:checked + .filters__item-label::after,
 .filters__item-checkbox + .filters__item-label:hover::before,
 .filters__item-checkbox:checked + .filters__item-label:hover::after,
 .filters__item-radio + .filters__item-label:hover::before,
-.filters__item-radio + .filters__item-label:hover::after,
-.filters__item-checkbox + .filters__item-label:focus::before,
-.filters__item-checkbox:checked + .filters__item-label:focus::after,
-.filters__item-radio + .filters__item-label:focus::before,
-.filters__item-radio + .filters__item-label:focus::after {
+.filters__item-radio + .filters__item-label:hover::after {
   opacity: 100%;
 }
 
