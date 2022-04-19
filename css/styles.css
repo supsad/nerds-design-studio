@@ -739,7 +739,7 @@ img {
   grid-template-columns: 260px 1fr;
   grid-template-rows: 115px 1fr;
   column-gap: 140px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .sites {
@@ -1171,6 +1171,7 @@ img {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -1181,10 +1182,10 @@ img {
   max-width: 260px;
   padding: 16px 20px;
   margin-right: 11px;
+  margin-bottom: 10px;
 }
 
 .pagination__button_next {
-  max-width: 260px;
   padding: 16px 81px;
   margin: 0;
 }
