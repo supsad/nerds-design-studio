@@ -1124,6 +1124,7 @@ img {
 
 .sites__img {
   width: 100%;
+  object-fit: contain;
 }
 
 .sites__item-info {
