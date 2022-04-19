@@ -1290,9 +1290,7 @@ img {
   padding: 0 40px;
 }
 
-.contacts__address {
-  position: absolute;
-  top: 54px;
+.address {
   padding: 50px;
   width: 319px;
   height: 308px;
@@ -1300,6 +1298,12 @@ img {
 
   font-style: normal;
   background-color: var(--basic-white);
+}
+
+.contacts__address {
+  position: absolute;
+  top: 54px;
+  left: 0;
 }
 
 .address__heading {
@@ -1337,7 +1341,7 @@ img {
   text-decoration: none;
 }
 
-.contacts__button {
+.address__button {
   width: 219px;
   margin-top: 34px;
   padding: 16px 44px;
