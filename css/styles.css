@@ -1180,12 +1180,15 @@ img {
 /* Pagination */
 
 .pagination {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.sites__pagination {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination__button {
