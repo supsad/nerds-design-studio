@@ -715,6 +715,10 @@ img {
   opacity: 10%;
 }
 
+.clients__ref img {
+  object-fit: contain;
+}
+
 /* Catalog */
 
 /* Catalog Heading */
