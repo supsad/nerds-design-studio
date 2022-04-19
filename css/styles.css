@@ -188,6 +188,26 @@ img {
   color: var(--text-button-active-black);
 }
 
+/* Logo */
+
+.logo {
+  object-fit: contain;
+}
+
+.logo:hover {
+  opacity: 70%;
+}
+
+.logo:active {
+  opacity: 30%;
+}
+
+.logo_disabled,
+.logo_disabled:hover,
+.logo_disabled:active {
+  opacity: 100%;
+}
+
 /* Header */
 
 .page-header {
@@ -289,20 +309,6 @@ img {
   height: 2px;
 
   background-color: var(--accent-red);
-}
-
-.logo:hover {
-  opacity: 70%;
-}
-
-.logo:active {
-  opacity: 30%;
-}
-
-.logo_disabled,
-.logo_disabled:hover,
-.logo_disabled:active {
-  opacity: 100%;
 }
 
 /* Presentation */
