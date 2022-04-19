@@ -969,20 +969,27 @@ img {
 
 .sort__form {
   display: flex;
+  justify-content: flex-end;
 }
 
 .sort__list {
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding-left: 30px;
 
   list-style: none;
 }
 
 .sort__list:first-child {
   margin-right: 47px;
+}
+
+.sort__list:last-child {
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
 .sort__item {
@@ -1023,7 +1030,7 @@ img {
   display: block;
   width: 11px;
   height: 10px;
-  margin-right: 18px;
+  margin-right: 9px;
 
   color: var(--arrows-grey);
   background-image: url("../img/small-icons/down-arrow-opti.svg");
@@ -1034,6 +1041,7 @@ img {
 }
 
 .sort__item-arrows:last-child .sort__item-button {
+  margin-left: 9px;
   margin-right: 0;
 
   transform: rotate(180deg);
