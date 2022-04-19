@@ -1361,6 +1361,8 @@ img {
   display: block;
   margin: 0 auto;
   width: 100%;
+
+  background-color: var(--extra-grey-300);
 }
 
 /* Social */
