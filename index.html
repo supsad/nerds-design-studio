@@ -134,8 +134,6 @@
     </ul>
   </section>
 
-  <hr class="separator wrapper__separator-services">
-
   <section class="about">
     <h2 class="visually-hidden">О компании</h2>
 
@@ -230,9 +228,9 @@
     <h2 class="visually-hidden">Контакты</h2>
 
     <address class="address contacts__address">
-      <p class="address__heading">NЁRDS DESIGN STUDIO</p>
+      <p class="address__heading" title="NЁRDS DESIGN STUDIO">NЁRDS DESIGN STUDIO</p>
 
-      <p class="address__location">
+      <p class="address__location" title="наб. Реки Карповки, 5 лит П, Санкт-Петербург">
         наб. Реки Карповки, <br>
         5 лит П, Санкт-Петербург
       </p>
@@ -298,32 +296,32 @@
       </div>
     </div>
   </section>
-
-  <section class="page-footer__popup page-footer__popup_disabled">
-    <div class="page-footer__popup-wrapper">
-      <button class="page-footer__popup-close" type="button" aria-label="Закрыть"></button>
-      <h2 class="page-footer__popup-heading">Напишите нам</h2>
-      <form class="page-footer__form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="page-footer__popup-item">
-          <label class="page-footer__popup-label" for="popup-username">Ваше имя:</label>
-          <input class="page-footer__popup-input" type="text" name="popup-username" id="popup-username"
-                 placeholder="Имя Фамилия" required>
-        </p>
-        <p class="page-footer__popup-item">
-          <label class="page-footer__popup-label" for="popup-email">Ваш email:</label>
-          <input class="page-footer__popup-input" type="email" name="popup-email" id="popup-email"
-                 placeholder="email@example.com " required>
-        </p>
-        <p class="page-footer__popup-item page-footer__popup-item_wide">
-          <label class="page-footer__popup-label" for="popup-message">Текст письма:</label>
-          <textarea class="page-footer__popup-message" name="popup-message" id="popup-message"
-                    placeholder="В свободной форме" required></textarea>
-        </p>
-
-        <button class="button button__popup" type="submit">Отправить</button>
-      </form>
-    </div>
-  </section>
 </footer>
+
+<section class="popup popup_disabled">
+  <div class="popup__wrapper">
+    <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
+    <h2 class="page-footer__popup-heading">Напишите нам</h2>
+    <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="popup__item">
+        <label class="popup__label" for="popup-username">Ваше имя:</label>
+        <input class="popup__input" type="text" name="popup-username" id="popup-username"
+               placeholder="Имя Фамилия" required>
+      </p>
+      <p class="popup__item">
+        <label class="popup__label" for="popup-email">Ваш email:</label>
+        <input class="popup__input" type="email" name="popup-email" id="popup-email"
+               placeholder="email@example.com " required>
+      </p>
+      <p class="popup__item popup__item_wide">
+        <label class="popup__label" for="popup-message">Текст письма:</label>
+        <textarea class="popup__message-textarea" name="popup-message" id="popup-message"
+                  placeholder="В свободной форме" required></textarea>
+      </p>
+
+      <button class="button popup__button" type="submit">Отправить</button>
+    </form>
+  </div>
+</section>
 </body>
 </html>
