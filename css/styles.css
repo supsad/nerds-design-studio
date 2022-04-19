@@ -280,7 +280,7 @@ img {
   position: relative;
 }
 
-.page-header__cart-bug_active::after {
+.page-navigation__cart-bug_active::after {
   content: "";
   position: absolute;
   top: 43px;
@@ -838,7 +838,7 @@ img {
   align-items: center;
 }
 
-.filters__price-input-number {
+.filters__price-number {
   max-width: 80px;
   min-height: 38px;
   margin-left: 10px;
@@ -850,16 +850,16 @@ img {
   border-radius: 3px;
 }
 
-.filters__price-input-number:last-child {
+.filters__price-number:last-child {
   margin: 0;
 }
 
-.filters__price-input-label {
+.filters__price-label {
   margin-right: 8px;
 }
 
-.filters__price-input-label,
-.filters__price-input-number {
+.filters__price-label,
+.filters__price-number {
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
@@ -886,7 +886,7 @@ img {
   margin-bottom: 0;
 }
 
-.filters__item-input-label {
+.filters__item-label {
   display: block;
   position: relative;
 
@@ -894,7 +894,7 @@ img {
   user-select: none;
 }
 
-.filters__item-input-checkbox + .filters__item-input-label::before {
+.filters__item-checkbox + .filters__item-label::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -908,11 +908,11 @@ img {
   opacity: 40%;
 }
 
-.filters__item-input-checkbox:checked + .filters__item-input-label::before {
+.filters__item-checkbox:checked + .filters__item-label::before {
   background-position: -33px 0;
 }
 
-.filters__item-input-radio + .filters__item-input-label::before {
+.filters__item-radio + .filters__item-label::before {
   content: "";
   position: absolute;
   top: -3px;
@@ -926,26 +926,26 @@ img {
   opacity: 40%;
 }
 
-.filters__item-input-radio:checked + .filters__item-input-label::before {
+.filters__item-radio:checked + .filters__item-label::before {
   background-position: -35px 0;
 }
 
-.filters__item-input-checkbox + .filters__item-input-label:hover::before,
-.filters__item-input-checkbox:checked + .filters__item-input-label:hover::after,
-.filters__item-input-radio + .filters__item-input-label:hover::before,
-.filters__item-input-radio + .filters__item-input-label:hover::after,
-.filters__item-input-checkbox + .filters__item-input-label:focus::before,
-.filters__item-input-checkbox:checked + .filters__item-input-label:focus::after,
-.filters__item-input-radio + .filters__item-input-label:focus::before,
-.filters__item-input-radio + .filters__item-input-label:focus::after {
+.filters__item-checkbox + .filters__item-label:hover::before,
+.filters__item-checkbox:checked + .filters__item-label:hover::after,
+.filters__item-radio + .filters__item-label:hover::before,
+.filters__item-radio + .filters__item-label:hover::after,
+.filters__item-checkbox + .filters__item-label:focus::before,
+.filters__item-checkbox:checked + .filters__item-label:focus::after,
+.filters__item-radio + .filters__item-label:focus::before,
+.filters__item-radio + .filters__item-label:focus::after {
   opacity: 100%;
 }
 
 .filters__options-item_disabled,
-.filters__item-input-checkbox + .filters__item-input-label:disabled::before,
-.filters__item-input-checkbox:checked + .filters__item-input-label:disabled::after,
-.filters__item-input-radio + .filters__item-input-label:disabled::before,
-.filters__item-input-radio + .filters__item-input-label:disabled::after {
+.filters__item-checkbox + .filters__item-label:disabled::before,
+.filters__item-checkbox:checked + .filters__item-label:disabled::after,
+.filters__item-radio + .filters__item-label:disabled::before,
+.filters__item-radio + .filters__item-label:disabled::after {
   opacity: 30%;
 }
 
