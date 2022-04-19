@@ -18,8 +18,8 @@
 <body>
 <header class="page-header">
   <nav class="page-navigation page-header__page-navigation">
-    <div class="page-header__wrapper-logo">
-      <a href="index.html" class="logo page-header__logo">
+    <div class="page-navigation__wrapper-logo">
+      <a href="index.html" class="logo page-navigation__logo">
         <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Перейти на главную страницу сайта">
       </a>
     </div>
@@ -50,8 +50,8 @@
         </a>
       </li>
     </ul>
-    <div class="page-header__wrapper-cart-bug">
-      <a class="ref page-header__cart-bug" href="blank.html">Корзина</a>
+    <div class="page-navigation__wrapper-cart-bug">
+      <a class="ref page-navigation__cart-bug" href="blank.html">Корзина</a>
     </div>
   </nav>
 </header>
@@ -150,28 +150,28 @@
   </section>
 </footer>
 
-<section class="popup popup_disabled">
-  <div class="popup__wrapper">
-    <button class="popup__close-button" type="button" aria-label="Закрыть"></button>
-    <h2 class="page-footer__popup-heading">Напишите нам</h2>
-    <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="popup__item">
-        <label class="popup__label" for="popup-username">Ваше имя:</label>
-        <input class="popup__input" type="text" name="popup-username" id="popup-username"
+<section class="modal-message modal-message_disabled">
+  <div class="modal-message__wrapper">
+    <button class="modal-message__close-button" type="button" aria-label="Закрыть"></button>
+    <h2 class="modal-message__heading">Напишите нам</h2>
+    <form class="modal-message__form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="modal-message__item">
+        <label class="modal-message__label" for="popup-username">Ваше имя:</label>
+        <input class="modal-message__input" type="text" name="popup-username" id="popup-username"
                placeholder="Имя Фамилия" required>
       </p>
-      <p class="popup__item">
-        <label class="popup__label" for="popup-email">Ваш email:</label>
-        <input class="popup__input" type="email" name="popup-email" id="popup-email"
+      <p class="modal-message__item">
+        <label class="modal-message__label" for="popup-email">Ваш email:</label>
+        <input class="modal-message__input" type="email" name="popup-email" id="popup-email"
                placeholder="email@example.com " required>
       </p>
-      <p class="popup__item popup__item_wide">
-        <label class="popup__label" for="popup-message">Текст письма:</label>
-        <textarea class="popup__message-textarea" name="popup-message" id="popup-message"
+      <p class="modal-message__item popup__item_wide">
+        <label class="modal-message__label" for="popup-message">Текст письма:</label>
+        <textarea class="modal-message__textarea" name="popup-message" id="popup-message"
                   placeholder="В свободной форме" required></textarea>
       </p>
 
-      <button class="button popup__button" type="submit">Отправить</button>
+      <button class="button modal-message__button" type="submit">Отправить</button>
     </form>
   </div>
 </section>
