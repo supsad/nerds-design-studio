@@ -203,7 +203,6 @@ img {
   grid-template-columns: auto 1fr min-content;
   column-gap: 40px;
   width: 1240px;
-  height: 66px;
   margin: 49px auto 0;
   padding: 0 40px;
 }
@@ -218,7 +217,7 @@ img {
   align-items: center;
   flex-wrap: wrap;
   /* gap 80+% supports browsers */
-  gap: 10px 45px;
+  gap: 20px 45px;
   margin: 0;
   padding: 0;
 
@@ -226,8 +225,8 @@ img {
 }
 
 .page-navigation__list,
-.page-header__cart-bug {
-  margin-top: 8px;
+.page-header__wrapper-cart-bug {
+  padding-top: 15px;
 }
 
 .logo {
@@ -237,13 +236,15 @@ img {
 
 .page-header__wrapper-logo {
   grid-column: 1 / 2;
+
+  height: 66px;
 }
 
 .page-navigation__item {
   position: relative;
 }
 
-.page-navigation__ref_active::after {
+.page-navigation__item_active::after {
   content: "";
   position: absolute;
   top: 43px;
