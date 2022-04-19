@@ -1131,8 +1131,7 @@ img {
   left: 0;
   width: 360px;
   height: 231px;
-  padding-top: 28px;
-  padding-bottom: 44px;
+  padding: 28px 20px 44px;
   text-align: center;
 
   opacity: 0;
