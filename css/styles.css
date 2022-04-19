@@ -593,7 +593,7 @@ img {
 
 /* About data */
 
-.about-data::before {
+.studio-statistic::before {
   content: "";
   display: block;
   width: 360px;
@@ -605,7 +605,7 @@ img {
   background-position: 0 0;
 }
 
-.about-data__heading-list {
+.studio-statistic__heading {
   margin-top: 0;
   margin-bottom: 31px;
   text-align: center;
@@ -614,7 +614,7 @@ img {
   text-transform: uppercase;
 }
 
-.about-data__advantages {
+.studio-statistic__advantages {
   /* Grid version of dl */
   /*display: grid;*/
   /*grid-template-columns: repeat(3, 1fr);*/
@@ -628,24 +628,24 @@ img {
   margin: 0;
 }
 
-.advantages__wrapper {
+.studio-statistic__wrapper {
   display: flex;
   flex-direction: column-reverse;
   flex-basis: 100px;
   margin-right: 19px;
 }
 
-.advantages__wrapper:last-child {
+.studio-statistic__wrapper:last-child {
   margin-right: 0;
 }
 
-.advantages__term {
+.studio-statistic__term {
   font-size: 16px;
   line-height: 18px;
   color: var(--extra-grey-300);
 }
 
-.advantages__persentages {
+.studio-statistic__persentages {
   margin-left: 0;
   margin-bottom: 11px;
 
@@ -654,17 +654,20 @@ img {
   line-height: 64px;
 }
 
-/* fixed html tabs -n margin */
-.advantages__persentages-sup {
-  position: relative;
-  bottom: 15px;
-  margin-left: -10px;
 
+.studio-statistic__persentages-symb {
   font-size: 26px;
   line-height: 40px;
 }
 
-.advantages__persentages:last-child {
+/* fixed html tabs -n margin */
+.studio-statistic__persentages-symb_upper {
+  position: relative;
+  bottom: 15px;
+  margin-left: -10px;
+}
+
+.studio-statistic__persentages:last-child {
   margin-right: 0;
 }
 
