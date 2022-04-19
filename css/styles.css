@@ -1460,6 +1460,7 @@ img {
 /* Popup */
 
 .modal-message {
+  display: none;
   position: fixed;
   top: auto;
   bottom: 10vh;
