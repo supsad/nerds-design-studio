@@ -960,7 +960,8 @@ img {
 }
 
 .sort__heading {
-  margin: 0;
+  max-width: 360px;
+  margin: 0 30px 0 0;
 
   font-weight: 700;
   font-size: 18px;
@@ -978,7 +979,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   margin: 0;
-  padding-left: 30px;
+  padding: 0;
 
   list-style: none;
 }
@@ -1031,7 +1032,6 @@ img {
   display: block;
   width: 11px;
   height: 10px;
-  margin-right: 9px;
 
   color: var(--arrows-grey);
   background-image: url("../img/small-icons/down-arrow-opti.svg");
@@ -1041,11 +1041,17 @@ img {
   opacity: 20%;
 }
 
-.sort__item-arrows:last-child .sort__item-button {
+.sort__item-arrows-button_rotate .sort__item-button {
+  transform: rotate(180deg);
+}
+
+.sort__item-arrows:nth-child(odd) .sort__item-button {
+  margin-right: 9px;
+}
+
+.sort__item-arrows:nth-child(even) .sort__item-button {
   margin-left: 9px;
   margin-right: 0;
-
-  transform: rotate(180deg);
 }
 
 .sort__item-arrows:hover .sort__item-button {
