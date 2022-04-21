@@ -1312,6 +1312,7 @@ img {
 
   font-style: normal;
   background-color: var(--basic-white);
+  box-shadow: 0 20px 40px var(--box-shadow-popup);
 }
 
 .contacts__address {
@@ -1367,6 +1368,14 @@ img {
   position: relative;
 
   background-color: var(--light-grey-200);
+}
+
+.map__google-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Plug map */
