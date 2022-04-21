@@ -6,6 +6,9 @@ popupOpenButton.addEventListener('click', function (evt) {
   popupMessageUs.classList.add('modal-message_show');
 });
 
-
+popupCloseButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  popupMessageUs.classList.remove('modal-message_show');
+});
 
 
