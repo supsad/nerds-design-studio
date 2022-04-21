@@ -8,6 +8,9 @@ const popupUserName = popupMessageUs.querySelector('[name=popup-username]');
 const popupEmail = popupMessageUs.querySelector('[name=email]');
 const popupTextareaMessage = popupMessageUs.querySelector('[name=popup-message]');
 
+let isPopupStorageSupport = true;
+const popupStorage = '';
+
 popupOpenButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   popupMessageUs.classList.add('modal-message_show');
@@ -25,6 +28,11 @@ window.addEventListener('keydown', function (evt) {
     if (popupMessageUs.classList.contains('modal-message_show')) {
       evt.preventDefault();
       popupMessageUs.classList.remove('modal-message_show');
+    } else {
+      if (isPopupStorageSupport) {
+        localStorage.setItem('user-name', popupUserName.value);
+        localStorage.setItem('user-email', popupEmail.value);
+      }
     }
   }
 });
