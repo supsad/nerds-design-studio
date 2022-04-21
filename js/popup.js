@@ -1,7 +1,12 @@
 const popupMessageUs = document.querySelector('.modal-message');
+
 const popupOpenButton = document.querySelector('.address__button');
 const popupCloseButton = popupMessageUs.querySelector('.modal-message__close-button');
+
+const popupForm = popupMessageUs.querySelector('.modal-message__form');
 const popupUserName = popupMessageUs.querySelector('[name=popup-username]');
+const popupEmail = popupMessageUs.querySelector('[name=email]');
+const popupTextareaMessage = popupMessageUs.querySelector('[name=popup-message]');
 
 popupOpenButton.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -21,5 +26,13 @@ window.addEventListener('keydown', function (evt) {
       evt.preventDefault();
       popupMessageUs.classList.remove('modal-message_show');
     }
+  }
+});
+
+popupForm.addEventListener('submit', function (evt) {
+  if (!popupUserName.value || !popupEmail.value || !popupTextareaMessage.value) {
+    evt.preventDefault();
+    alert('Вы не заполнили обязательные поля! ' +
+      'Перед отправкой сообщения, пожалуйста, заполните все поля.');
   }
 });
