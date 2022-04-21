@@ -5,17 +5,45 @@ const popupCloseButton = popupMessageUs.querySelector('.modal-message__close-but
 
 const popupForm = popupMessageUs.querySelector('.modal-message__form');
 const popupUserName = popupMessageUs.querySelector('[name=popup-username]');
-const popupEmail = popupMessageUs.querySelector('[name=email]');
+const popupUserEmail = popupMessageUs.querySelector('[name=email]');
 const popupTextareaMessage = popupMessageUs.querySelector('[name=popup-message]');
 
 let isPopupStorageSupport = true;
-const popupStorage = '';
+let popupStorage = '';
+
+try {
+  popupStorage = localStorage.getItem('user-name');
+  popupStorage = localStorage.getItem('user-email');
+} catch (err) {
+  isPopupStorageSupport = false;
+}
 
 popupOpenButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   popupMessageUs.classList.add('modal-message_show');
 
-  popupUserName.focus();
+  if (popupStorage) {
+    popupUserName.value = popupStorage;
+    popupUserEmail.focus();
+  } else if (popupStorage) {
+    popupUserEmail.value = popupStorage;
+    popupTextareaMessage.focus();
+  } else {
+    popupUserName.focus();
+  }
+});
+
+popupForm.addEventListener('submit', function (evt) {
+  if (!popupUserName.value || !popupUserEmail.value || !popupTextareaMessage.value) {
+    evt.preventDefault();
+    alert('Вы не заполнили обязательные поля! ' +
+      'Перед отправкой сообщения, пожалуйста, заполните все поля.');
+  } else {
+    if (isPopupStorageSupport) {
+      localStorage.setItem('user-name', popupUserName.value);
+      localStorage.setItem('user-email', popupUserEmail.value);
+    }
+  }
 });
 
 popupCloseButton.addEventListener('click', function (evt) {
@@ -28,19 +56,7 @@ window.addEventListener('keydown', function (evt) {
     if (popupMessageUs.classList.contains('modal-message_show')) {
       evt.preventDefault();
       popupMessageUs.classList.remove('modal-message_show');
-    } else {
-      if (isPopupStorageSupport) {
-        localStorage.setItem('user-name', popupUserName.value);
-        localStorage.setItem('user-email', popupEmail.value);
-      }
     }
   }
 });
 
-popupForm.addEventListener('submit', function (evt) {
-  if (!popupUserName.value || !popupEmail.value || !popupTextareaMessage.value) {
-    evt.preventDefault();
-    alert('Вы не заполнили обязательные поля! ' +
-      'Перед отправкой сообщения, пожалуйста, заполните все поля.');
-  }
-});
