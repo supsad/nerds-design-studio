@@ -1497,6 +1497,7 @@ img {
 
 .modal-message_show {
   display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-message__wrapper {
@@ -1605,3 +1606,26 @@ img {
 .modal-message__button {
   padding: 16px 83px;
 }
+
+/* Animation */
+
+/* Open popup animation */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
