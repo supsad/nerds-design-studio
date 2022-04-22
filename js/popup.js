@@ -36,6 +36,9 @@ popupOpenButton.addEventListener('click', function (evt) {
 popupForm.addEventListener('submit', function (evt) {
   if (!popupUserName.value || !popupUserEmail.value || !popupTextareaMessage.value) {
     evt.preventDefault();
+    popupMessageUs.classList.remove('modal-message_error');
+    popupMessageUs.offsetWidth = popupMessageUs.offsetWidth;
+    popupMessageUs.classList.add('modal-message_error');
     alert('Вы не заполнили обязательные поля! ' +
       'Перед отправкой сообщения, пожалуйста, заполните все поля.');
   } else {
@@ -49,6 +52,7 @@ popupForm.addEventListener('submit', function (evt) {
 popupCloseButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   popupMessageUs.classList.remove('modal-message_show');
+  popupMessageUs.classList.remove('modal-message_error');
 });
 
 window.addEventListener('keydown', function (evt) {
@@ -56,6 +60,7 @@ window.addEventListener('keydown', function (evt) {
     if (popupMessageUs.classList.contains('modal-message_show')) {
       evt.preventDefault();
       popupMessageUs.classList.remove('modal-message_show');
+      popupMessageUs.classList.remove('modal-message_error');
     }
   }
 });
