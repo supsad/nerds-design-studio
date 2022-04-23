@@ -152,29 +152,27 @@
 </footer>
 
 <section class="modal-message">
-  <div class="modal-message__wrapper">
-    <button class="modal-message__close-button" type="button" aria-label="Закрыть"></button>
-    <h2 class="modal-message__heading">Напишите нам</h2>
-    <form class="modal-message__form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="modal-message__item">
-        <label class="modal-message__label" for="popup-username">Ваше имя:</label>
-        <input class="modal-message__input" type="text" name="popup-username" id="popup-username"
-               placeholder="Имя Фамилия">
-      </p>
-      <p class="modal-message__item">
-        <label class="modal-message__label" for="popup-email">Ваш email:</label>
-        <input class="modal-message__input" type="email" name="popup-email" id="popup-email"
-               placeholder="email@example.com ">
-      </p>
-      <p class="modal-message__item modal-message__item_wide">
-        <label class="modal-message__label" for="popup-message">Текст письма:</label>
-        <textarea class="modal-message__textarea" name="popup-message" id="popup-message"
-                  placeholder="В свободной форме"></textarea>
-      </p>
+  <button class="modal-message__close-button" type="button" aria-label="Закрыть"></button>
+  <h2 class="modal-message__heading">Напишите нам</h2>
+  <form class="modal-message__form" action="https://echo.htmlacademy.ru" method="post">
+    <p class="modal-message__item">
+      <label class="modal-message__label" for="popup-username">Ваше имя:</label>
+      <input class="modal-message__input" type="text" name="popup-username" id="popup-username"
+             placeholder="Имя Фамилия">
+    </p>
+    <p class="modal-message__item">
+      <label class="modal-message__label" for="popup-email">Ваш email:</label>
+      <input class="modal-message__input" type="email" name="popup-email" id="popup-email"
+             placeholder="email@example.com ">
+    </p>
+    <p class="modal-message__item modal-message__item_wide">
+      <label class="modal-message__label" for="popup-message">Текст письма:</label>
+      <textarea class="modal-message__textarea" name="popup-message" id="popup-message"
+                placeholder="В свободной форме"></textarea>
+    </p>
 
-      <button class="button modal-message__button" type="submit">Отправить</button>
-    </form>
-  </div>
+    <button class="button modal-message__button" type="submit">Отправить</button>
+  </form>
 </section>
 
 <script src="js/popup.min.js"></script>
