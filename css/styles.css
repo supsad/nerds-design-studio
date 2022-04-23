@@ -1490,6 +1490,7 @@ img {
   height: 590px;
   z-index: 10;
   margin: auto;
+  padding: 63px 100px 84px 100px;
 
   background-color: var(--basic-white);
   box-shadow: 0 20px 40px var(--box-shadow-popup);
@@ -1502,10 +1503,6 @@ img {
 
 .modal-message_error {
   animation: shake__popup 0.6s;
-}
-
-.modal-message__wrapper {
-  padding: 63px 100px 84px 100px;
 }
 
 .modal-message__heading {
