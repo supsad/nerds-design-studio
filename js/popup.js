@@ -11,6 +11,10 @@ const popupTextareaMessage = popupMessageUs.querySelector('[name=popup-message]'
 let isPopupStorageSupport = true;
 let popupStorage = '';
 
+const alertErrMessage = function (message) {
+  alert(message);
+};
+
 try {
   popupStorage = localStorage.getItem('user-name');
   popupStorage = localStorage.getItem('user-email');
@@ -39,8 +43,8 @@ popupForm.addEventListener('submit', function (evt) {
     popupMessageUs.classList.remove('modal-message_error');
     popupMessageUs.offsetWidth = popupMessageUs.offsetWidth;
     popupMessageUs.classList.add('modal-message_error');
-    alert('Вы не заполнили обязательные поля! ' +
-      'Перед отправкой сообщения, пожалуйста, заполните все поля.');
+    setTimeout(alertErrMessage, 300, 'Вы не заполнили обязательные поля!\n' +
+      'Перед отправкой сообщения, пожалуйста, заполните все поля.')
   } else {
     if (isPopupStorageSupport) {
       localStorage.setItem('user-name', popupUserName.value);
