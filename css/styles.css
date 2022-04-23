@@ -1505,6 +1505,10 @@ img {
   animation: shake__popup 0.6s;
 }
 
+.modal-message_close {
+  animation: bounce-revert__popup 0.6s;
+}
+
 .modal-message__heading {
   margin: 0 0 37px 0;
 
@@ -1628,6 +1632,20 @@ img {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes bounce-revert__popup {
+  0% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(-2000px);
   }
 }
 

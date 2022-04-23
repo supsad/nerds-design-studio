@@ -15,6 +15,20 @@ const alertErrMessage = function (message) {
   alert(message);
 };
 
+const closePopupHandler = function (item) {
+  const closePopup = function () {
+    item.classList.remove('modal-message_show');
+  };
+
+  const closePopupAnim = function () {
+    item.classList.remove('modal-message_close');
+  };
+
+  item.classList.add('modal-message_close');
+  setTimeout(closePopupAnim, 600);
+  setTimeout(closePopup, 600);
+}
+
 try {
   popupStorage = localStorage.getItem('user-name');
   popupStorage = localStorage.getItem('user-email');
@@ -55,7 +69,7 @@ popupForm.addEventListener('submit', function (evt) {
 
 popupCloseButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popupMessageUs.classList.remove('modal-message_show');
+  closePopupHandler(popupMessageUs);
   popupMessageUs.classList.remove('modal-message_error');
 });
 
@@ -63,7 +77,7 @@ window.addEventListener('keydown', function (evt) {
   if (evt.key === 'Escape') {
     if (popupMessageUs.classList.contains('modal-message_show')) {
       evt.preventDefault();
-      popupMessageUs.classList.remove('modal-message_show');
+      closePopupHandler(popupMessageUs);
       popupMessageUs.classList.remove('modal-message_error');
     }
   }
