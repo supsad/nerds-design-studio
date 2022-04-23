@@ -1497,11 +1497,11 @@ img {
 
 .modal-message_show {
   display: block;
-  animation: bounce 0.6s;
+  animation: bounce__popup 0.6s;
 }
 
 .modal-message_error {
-  animation: shake 0.6s;
+  animation: shake__popup 0.6s;
 }
 
 .modal-message__wrapper {
