@@ -9,7 +9,31 @@ const popupUserEmail = popupMessageUs.querySelector('[name=modal-email]');
 const popupTextareaMessage = popupMessageUs.querySelector('[name=modal-message]');
 
 let isPopupStorageSupport = true;
-let popupStorage = '';
+let popupNameStorage = '';
+let popupEmailStorage = '';
+
+try {
+  popupNameStorage = localStorage.getItem('user-name');
+  popupEmailStorage = localStorage.getItem('user-email');
+} catch (err) {
+  isPopupStorageSupport = false;
+}
+
+// Trying to validate email in js but...
+
+// const emailValidate = function (input) {
+//   const EMAIL_REGEXP =
+//     /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+//
+//   return EMAIL_REGEXP.test(input);
+// }
+
+// if (emailValidate(popupUserEmail)) {
+//   evt.preventDefault();
+//   alert("Вы ввели некорректный email-адрес!");
+//   popupUserEmail.setAttribute('invalid', '');
+//   popupUserEmail.focus();
+// }
 
 const alertErrMessage = function (message) {
   alert(message);
@@ -27,13 +51,6 @@ const closePopupHandler = function (item) {
   item.classList.add('modal-message_close');
   setTimeout(closePopupAnim, 600);
   setTimeout(closePopup, 500);
-}
-
-try {
-  popupNameStorage = localStorage.getItem('user-name');
-  popupEmailStorage = localStorage.getItem('user-email');
-} catch (err) {
-  isPopupStorageSupport = false;
 }
 
 popupOpenButton.addEventListener('click', function (evt) {
