@@ -74,7 +74,7 @@ popupCloseButton.addEventListener('click', function (evt) {
 });
 
 window.addEventListener('keydown', function (evt) {
-  if (evt.key === 'Escape') {
+  if (evt.key === 'Escape' || evt.key === 'Esc') {
     if (popupMessageUs.classList.contains('modal-message_show')) {
       evt.preventDefault();
       closePopupHandler(popupMessageUs);
