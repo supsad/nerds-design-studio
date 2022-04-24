@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Каталог продуктов</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.min.css">
 
   <link rel="preload" href="fonts/roboto.woff2" as="font">
   <link rel="preload" href="fonts/roboto.woff" as="font">
@@ -17,9 +17,10 @@
 </head>
 <body>
 <header class="page-header">
-  <nav class="page-navigation page-header__page-navigation">
-    <div class="page-header__wrapper-logo">
-      <a href="index.html" class="logo page-header__logo">
+  <nav class="page-navigation" aria-labelledby="nav-heading">
+    <h2 class="visually-hidden" id="nav-heading">Навигация по сайту</h2>
+    <div class="page-navigation__wrapper-logo">
+      <a href="index.html" class="logo page-navigation__logo">
         <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Перейти на главную страницу сайта">
       </a>
     </div>
@@ -34,8 +35,8 @@
           Клиенты
         </a>
       </li>
-      <li class="page-navigation__item">
-        <a class="ref page-navigation__ref page-navigation__ref_active" href="catalog.html">
+      <li class="page-navigation__item page-navigation__item_active">
+        <a class="ref page-navigation__ref">
           Магазин
         </a>
       </li>
@@ -45,14 +46,14 @@
         </a>
       </li>
     </ul>
-    <div class="page-header__wrapper-cart-bug">
-      <a class="ref page-header__cart-bug" href="blank.html">Корзина</a>
+    <div class="page-navigation__wrapper-cart-bug">
+      <a class="ref page-navigation__cart-bug" href="blank.html">Корзина</a>
     </div>
   </nav>
 </header>
 
-<div class="heading-wrapper">
-  <h1 class="catalog-heading">Магазин готовых шаблонов</h1>
+<div class="page-heading__wrapper">
+  <h1 class="page-heading__heading">Магазин готовых шаблонов</h1>
 </div>
 
 <main class="wrapper">
@@ -78,13 +79,13 @@
 
             <div class="filters__price-controls">
               <div class="filters__price-controls-wrapper">
-                <label class="filters__price-input-label" for="price-from">От</label>
-                <input class="filters__price-input-number" type="text" id="price-from" name="price-from" value="0">
+                <label class="filters__price-label" for="price-from">От</label>
+                <input class="filters__price-number" type="text" id="price-from" name="price-from" value="0">
               </div>
 
               <div class="filters__price-controls-wrapper">
-                <label class="filters__price-input-label" for="price-to">До</label>
-                <input class="filters__price-input-number" type="text" id="price-to" name="price-to" value="150000">
+                <label class="filters__price-label" for="price-to">До</label>
+                <input class="filters__price-number" type="text" id="price-to" name="price-to" value="150000">
               </div>
             </div>
           </div>
@@ -94,19 +95,19 @@
           <legend class="filters__heading filters__heading_inner">Сетка:</legend>
           <ul class="filters__options-list">
             <li class="filters__options-item">
-              <input class="filters__item-input-radio visually-hidden" type="radio" name="layout"
+              <input class="filters__item-radio visually-hidden" type="radio" name="layout"
                      id="layout-adaptive" value="adaptive" checked>
-              <label class="filters__item-input-label" for="layout-adaptive">Адаптивная</label>
+              <label class="filters__item-label" for="layout-adaptive">Адаптивная</label>
             </li>
             <li class="filters__options-item">
-              <input class="filters__item-input-radio visually-hidden" type="radio" name="layout"
+              <input class="filters__item-radio visually-hidden" type="radio" name="layout"
                      id="layout-fixed" value="fixed">
-              <label class="filters__item-input-label" for="layout-fixed">Фиксированная</label>
+              <label class="filters__item-label" for="layout-fixed">Фиксированная</label>
             </li>
             <li class="filters__options-item">
-              <input class="filters__item-input-radio visually-hidden" type="radio" name="layout"
+              <input class="filters__item-radio visually-hidden" type="radio" name="layout"
                      id="layout-rubber" value="rubber">
-              <label class="filters__item-input-label" for="layout-rubber">Резиновая</label>
+              <label class="filters__item-label" for="layout-rubber">Резиновая</label>
             </li>
           </ul>
         </fieldset>
@@ -116,29 +117,29 @@
 
           <ul class="filters__options-list">
             <li class="filters__options-item">
-              <input class="filters__item-input-checkbox visually-hidden" type="checkbox"
+              <input class="filters__item-checkbox visually-hidden" type="checkbox"
                      name="slider" id="features-slider" checked>
-              <label class="filters__item-input-label" for="features-slider">Слайдер</label>
+              <label class="filters__item-label" for="features-slider">Слайдер</label>
             </li>
             <li class="filters__options-item">
-              <input class="filters__item-input-checkbox visually-hidden" type="checkbox"
+              <input class="filters__item-checkbox visually-hidden" type="checkbox"
                      name="advantage" id="features-advantage">
-              <label class="filters__item-input-label" for="features-advantage">Блок преимуществ</label>
+              <label class="filters__item-label" for="features-advantage">Блок преимуществ</label>
             </li>
             <li class="filters__options-item">
-              <input class="filters__item-input-checkbox visually-hidden" type="checkbox"
+              <input class="filters__item-checkbox visually-hidden" type="checkbox"
                      name="news" id="features-news" checked>
-              <label class="filters__item-input-label" for="features-news">Новости</label>
+              <label class="filters__item-label" for="features-news">Новости</label>
             </li>
             <li class="filters__options-item">
-              <input class="filters__item-input-checkbox visually-hidden" type="checkbox"
-                     name="gallery" id="features-galerry">
-              <label class="filters__item-input-label" for="features-galerry">Галерея</label>
+              <input class="filters__item-checkbox visually-hidden" type="checkbox"
+                     name="gallery" id="features-gallery">
+              <label class="filters__item-label" for="features-gallery">Галерея</label>
             </li>
             <li class="filters__options-item">
-              <input class="filters__item-input-checkbox visually-hidden" type="checkbox"
+              <input class="filters__item-checkbox visually-hidden" type="checkbox"
                      name="bag" id="features-bag">
-              <label class="filters__item-input-label" for="features-bag">Корзина</label>
+              <label class="filters__item-label" for="features-bag">Корзина</label>
             </li>
           </ul>
         </fieldset>
@@ -168,12 +169,14 @@
 
           <ul class="sort__list">
             <li class="sort__item-arrows sort__item-arrows-button_active">
-              <button class="sort__item-button sort__item-button_active" type="button"
-                      name="sort-list-decrease" aria-label=">По убыванию"></button>
+              <a href="" class="sort__item-button sort__item-button_active">
+                <span class="visually-hidden">По убыванию</span>
+              </a>
             </li>
-            <li class="sort__item-arrows">
-              <button class="sort__item-button" type="button"
-                      name="sort-list-increase" aria-label="По возрастанию"></button>
+            <li class="sort__item-arrows sort__item-arrows-button_rotate">
+              <a href="" class="sort__item-button sort__item-button_active">
+                <span class="visually-hidden">По убыванию</span>
+              </a>
             </li>
           </ul>
         </form>
@@ -183,14 +186,8 @@
     <section class="sites">
       <h2 class="visually-hidden">Список шаблонов</h2>
 
-      <!-- Подумать над тем, что нужно ли оборачивать блок с презентацией сайта в ссылку
-      или оставить только ссылку на название -->
       <ul class="sites__list">
         <li class="sites__item">
-          <!--          <svg>-->
-          <!--            <rect x="0" y="0" width="360" height="40"/>-->
-          <!--          </svg>-->
-
           <img class="sites__img" src="img/sites-list/sedona-opti.png" width="358" height="578"
                alt="Шаблон сайта Sedona">
 
@@ -202,7 +199,10 @@
               Информационный сайт <br>
               для туристов
             </p>
-            <a class="button sites__button" href="blank.html">9 900 Р</a>
+            <a class="button sites__button" href="blank.html" aria-label="Добавить в корзину сайт Sedona">
+              9 900&ensp;
+              <span>&#8381;</span>
+            </a>
           </div>
         </li>
 
@@ -218,7 +218,10 @@
               Продуктовый лендинг <br>
               приложения для iOS и Android
             </p>
-            <a class="button sites__button" href="blank.html">9 900 Р</a>
+            <a class="button sites__button" href="blank.html" aria-label="Добавить в корзину сайт Pink App">
+              9 900&ensp;
+              <span>&#8381;</span>
+            </a>
           </div>
         </li>
 
@@ -234,7 +237,10 @@
               Сайт салона красоты. <br>
               Для мужчин, да.
             </p>
-            <a class="button sites__button" href="blank.html">9 900 Р</a>
+            <a class="button sites__button" href="blank.html" aria-label="Добавить в корзину сайт Barbershop">
+              9 900&ensp;
+              <span>&#8381;</span>
+            </a>
           </div>
         </li>
 
@@ -250,7 +256,10 @@
               Интернет-магазин <br>
               вязаных игрушек
             </p>
-            <a class="button sites__button" href="blank.html">9 900 Р</a>
+            <a class="button sites__button" href="blank.html" aria-label="Добавить в корзину сайт Mishka">
+              9 900&ensp;
+              <span>&#8381;</span>
+            </a>
           </div>
         </li>
 
@@ -266,7 +275,10 @@
               Лендинг курсов повышения <br>
               квалификации
             </p>
-            <a class="button sites__button" href="blank.html">9 900 Р</a>
+            <a class="button sites__button" href="blank.html" aria-label="Добавить в корзину сайт A Plus">
+              9 900&ensp;
+              <span>&#8381;</span>
+            </a>
           </div>
         </li>
 
@@ -281,7 +293,10 @@
               Промо-сайт производителя <br>
               крафтового кваса
             </p>
-            <a class="button sites__button" href="blank.html">9 900 Р</a>
+            <a class="button sites__button" href="blank.html" aria-label="Добавить в корзину сайт Кваст">
+              9 900&ensp;
+              <span>&#8381;</span>
+            </a>
           </div>
         </li>
       </ul>
@@ -291,7 +306,7 @@
           <a class="button button_grey pagination__button pagination__button_disabled">1</a>
         </li>
         <li class="pagination__item">
-          <a class="button button_grey pagination__button" href="blank.html">2</a>
+          <a class="button button_grey pagination__button" href="blank.html" aria-label="Страница 2">2</a>
         </li>
         <li class="pagination__item">
           <a class="button button_grey pagination__button" href="blank.html">3</a>
@@ -315,18 +330,22 @@
         наб. Реки Карповки, <br>
         5 лит П, Санкт-Петербург
       </p>
-      <a class="address__tel" href="tel:88005558628">+7 800 555-86-28</a>
+      <a class="address__tel" href="tel:88005558628" aria-label="Наш телефон для связи: +7 (800) 555-86-28">
+        +7 800 555-86-28
+      </a>
 
-      <a class="button contacts__button" href="blank.html">Напишите нам</a>
+      <a class="button address__button" href="blank.html">Напишите нам</a>
     </address>
   </section>
 
   <section class="map">
     <h2 class="visually-hidden">Местоположение</h2>
-    <!-- Вставить карту -->
+
+    <iframe class="map__google-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8218455295357!2d30.316092154819405!3d59.968278636130776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!5e0!3m2!1sru!2sru!4v1650571706209!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <!-- Заглушка -->
-    <img class="map__img" src="img/map/map-n-marker-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
+    <img class="map__img" src="img/map/map-n-marker-opti.png" width="1440" height="416"
+         alt="Карта с нашим месторасположением">
   </section>
 
   <section class="social-media">
@@ -335,9 +354,9 @@
     <div class="social-media__wrapper">
       <ul class="social-media__list">
         <li class="social-media__item">
-          <a class="social-media__ref" href="blank.html">
-            <span class="visually-hidden">ВКонтакте</span>
-            <svg width="27" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="social-media__ref" href="blank.html" aria-label="Ссылка на нашу страницу Вконтакте">
+            <svg role="img" aria-label="Логотип Вконтакте" width="27" height="15" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
               <path d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534
                 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244
                 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621
@@ -351,17 +370,17 @@
           </a>
         </li>
         <li class="social-media__item">
-          <a class="social-media__ref" href="blank.html">
-            <span class="visually-hidden">Фейсбук</span>
-            <svg width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="social-media__ref" href="blank.html" aria-label="Ссылка на нашу страницу Фейсбук">
+            <svg role="img" aria-label="Логотип Фейсбук" width="12" height="22" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
               <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4Z" fill="#fff"/>
             </svg>
           </a>
         </li>
         <li class="social-media__item">
-          <a class="social-media__ref" href="blank.html">
-            <span class="visually-hidden">Инстаграм</span>
-            <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="social-media__ref" href="blank.html" aria-label="Ссылка на нашу страницу Инстаграм">
+            <svg role="img" aria-label="Логотип Инстаграм" width="21" height="21" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15c1.65 0 3 1.35 3 3v15c0
                 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3Zm11 10.5C14 8.57 12.43 7 10.5 7S7 8.57 7
                 10.5 8.57 14 10.5 14s3.5-1.57 3.5-3.5ZM3 18V9h1.181c-.118.491-.18.995-.181 1.5a6.5 6.5 0 1 0 13 0
@@ -377,32 +396,32 @@
       </div>
     </div>
   </section>
-
-  <section class="page-footer__popup page-footer__popup_disabled">
-    <div class="page-footer__popup-wrapper">
-      <button class="page-footer__popup-close" type="button" aria-label="Закрыть"></button>
-      <h2 class="page-footer__popup-heading">Напишите нам</h2>
-      <form class="page-footer__form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="page-footer__popup-item">
-          <label class="page-footer__popup-label" for="popup-username">Ваше имя:</label>
-          <input class="page-footer__popup-input" type="text" name="popup-username" id="popup-username"
-                 placeholder="Имя Фамилия" required>
-        </p>
-        <p class="page-footer__popup-item">
-          <label class="page-footer__popup-label" for="popup-email">Ваш email:</label>
-          <input class="page-footer__popup-input" type="email" name="popup-email" id="popup-email"
-                 placeholder="email@example.com " required>
-        </p>
-        <p class="page-footer__popup-item page-footer__popup-item_wide">
-          <label class="page-footer__popup-label" for="popup-message">Текст письма:</label>
-          <textarea class="page-footer__popup-message" name="popup-message" id="popup-message"
-                    placeholder="В свободной форме" required></textarea>
-        </p>
-
-        <button class="button button__popup" type="submit">Отправить</button>
-      </form>
-    </div>
-  </section>
 </footer>
+
+<section class="modal-message">
+  <button class="modal-message__close-button" type="button" aria-label="Закрыть"></button>
+  <h2 class="modal-message__heading">Напишите нам</h2>
+  <form class="modal-message__form" action="https://echo.htmlacademy.ru" method="post">
+    <p class="modal-message__item">
+      <label class="modal-message__label" for="modal-username">Ваше имя:</label>
+      <input class="modal-message__input" type="text" name="modal-username" id="modal-username"
+             placeholder="Имя Фамилия">
+    </p>
+    <p class="modal-message__item">
+      <label class="modal-message__label" for="modal-email">Ваш email:</label>
+      <input class="modal-message__input" type="email" name="modal-email" id="modal-email"
+             placeholder="email@example.com ">
+    </p>
+    <p class="modal-message__item modal-message__item_wide">
+      <label class="modal-message__label" for="modal-message">Текст письма:</label>
+      <textarea class="modal-message__textarea" name="modal-message" id="modal-message"
+                placeholder="В свободной форме"></textarea>
+    </p>
+
+    <button class="button modal-message__button" type="submit">Отправить</button>
+  </form>
+</section>
+
+<script src="js/popup.min.js"></script>
 </body>
 </html>

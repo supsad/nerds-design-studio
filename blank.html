@@ -2,10 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Страница заглушка</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/styles.min.css">
+
+  <link rel="preload" href="fonts/roboto.woff2" as="font">
+  <link rel="preload" href="fonts/roboto.woff" as="font">
 
   <link rel="icon" href="favicon.ico"><!-- 32x32 -->
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
@@ -14,56 +17,68 @@
 </head>
 <body>
 <header class="page-header">
-  <a class="logo page-header__logo">
-    <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Перейти на главную страницу сайта">
-  </a>
-  <nav class="main-navigation page-header__page-navigation">
+  <nav class="page-navigation" aria-labelledby="nav-heading">
+    <h2 class="visually-hidden" id="nav-heading">Навигация по сайту</h2>
+    <div class="page-navigation__wrapper-logo">
+      <a href="index.html" class="logo page-navigation__logo">
+        <img src="img/logo/nerds-opti.svg" width="160" height="66" alt="Перейти на главную страницу сайта">
+      </a>
+    </div>
     <ul class="page-navigation__list">
       <li class="page-navigation__item">
-        <a class="page-navigation__ref" href="blank.html">
+        <a class="ref page-navigation__ref" href="blank.html">
           Студия
         </a>
       </li>
       <li class="page-navigation__item">
-        <a class="page-navigation__ref" href="blank.html">
+        <a class="ref page-navigation__ref" href="blank.html">
           Клиенты
         </a>
       </li>
       <li class="page-navigation__item">
-        <a class="page-navigation__ref" href="catalog.html">
+        <a class="ref page-navigation__ref" href="catalog.html">
           Магазин
         </a>
       </li>
       <li class="page-navigation__item">
-        <a class="page-navigation__ref" href="blank.html">
+        <a class="ref page-navigation__ref" href="blank.html">
           Контакты
         </a>
       </li>
+      <li class="page-navigation__item  page-navigation__item_active">
+        <a class="ref page-navigation__ref">
+          Заглушка
+        </a>
+      </li>
     </ul>
-    <a class="page-header__cart-bug" href="blank.html">Корзина</a>
+    <div class="page-navigation__wrapper-cart-bug">
+      <a class="ref page-navigation__cart-bug" href="blank.html">Корзина</a>
+    </div>
   </nav>
 </header>
 
-<main>
-  <h1>Дизайн-студия Нёрдс</h1>
+<div class="page-heading__wrapper">
+  <h1 class="page-heading__heading">Страница-заглушка</h1>
+</div>
 
-  <section>
-    <h2>Страница-заглушка</h2>
-
-    <p>Это страница заглушка.</p>
-    <p>Пожалуйста, вернитесь на главную страницу по ссылке ниже.</p>
-    <p>
-      <a href="index.html">
+<main class="wrapper">
+  <section class="blank blank_wrapper">
+    <h2 class="blank__header">Это страница заглушка<br>
+      для разрабатывающихся частей сайта.</h2>
+    <p class="blank__description">Не знаем, как вам удалось сюда попасть, но<br>
+      <span class="blank__description-alert">пожалуйста, вернитесь на главную страницу по ссылке ниже.</span></p>
+    <div class="blank__logo-wrapper">
+      <a class="logo blank__logo" href="index.html">
         <img src="img/logo/nerds-opti.svg" width="320" height="130" alt="Повторная ссылка с нашим логотипом
-          на главную страницу сайта">
+        на главную страницу сайта">
       </a>
-    </p>
+    </div>
   </section>
 </main>
 
 <footer class="page-footer">
   <section class="contacts page-footer__contacts">
-    <h2>Контакты</h2>
+    <h2 class="visually-hidden">Контакты</h2>
 
     <address class="address contacts__address">
       <p class="address__heading">NЁRDS DESIGN STUDIO</p>
@@ -72,50 +87,97 @@
         наб. Реки Карповки, <br>
         5 лит П, Санкт-Петербург
       </p>
+      <a class="address__tel" href="tel:88005558628" aria-label="Наш телефон для связи: +7 (800) 555-86-28">
+        +7 800 555-86-28
+      </a>
 
-      <a class="address__tel" href="tel:88005558628">+7 800 555-86-28</a>
+      <a class="button address__button" href="blank.html">Напишите нам</a>
     </address>
-
-    <a class="button contacts__button" href="blank.html">Напишите нам</a>
   </section>
 
   <section class="map">
-    <h2>Местоположение</h2>
-    <!-- Вставить карту -->
+    <h2 class="visually-hidden">Местоположение</h2>
+    <iframe class="map__google-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8218455295357!2d30.316092154819405!3d59.968278636130776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!5e0!3m2!1sru!2sru!4v1650571706209!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <!-- Заглушка -->
-    <img src="img/map/map-opti.png" width="1440" height="416" alt="Карта с нашим месторасположением">
+    <img class="map__img" src="img/map/map-n-marker-opti.png" width="1440" height="416"
+         alt="Карта с нашим месторасположением">
   </section>
 
   <section class="social-media">
-    <h2>Социальные сети</h2>
+    <h2 class="visually-hidden">Социальные сети</h2>
 
-    <!-- Кнопки соц. сетей сделать не через img, а через bg-image
-    Описано в данной статье: https://htmlacademy.ru/blog/boost/frontend/content-or-decor-img -->
-    <ul class="social-media__list">
-      <li class="social-media__item">
-        <a class="social-media__ref" href="blank.html">
-          <!-- Сделать через css иконку или svg -->
-          <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети ВКонтакте">
-        </a>
-      </li>
-      <li class="social-media__item">
-        <a class="social-media__ref" href="blank.html">
-          <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети facebook">
-        </a>
-      </li>
-      <li class="social-media__item">
-        <a class="social-media__ref" href="blank.html">
-          <img src="https://via.placeholder.com/81x81" alt="Перейти к нам в социальной сети Instagram">
-        </a>
-      </li>
-    </ul>
+    <div class="social-media__wrapper">
+      <ul class="social-media__list">
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html" aria-label="Ссылка на нашу страницу Вконтакте">
+            <svg role="img" aria-label="Логотип Вконтакте" width="27" height="15" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534
+                1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244
+                1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621
+                1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664
+                0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16
+                1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54
+                3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203
+                10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419Z"
+                    fill="#fff"/>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html" aria-label="Ссылка на нашу страницу Фейсбук">
+            <svg role="img" aria-label="Логотип Фейсбук" width="12" height="22" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4Z" fill="#fff"/>
+            </svg>
+          </a>
+        </li>
+        <li class="social-media__item">
+          <a class="social-media__ref" href="blank.html" aria-label="Ссылка на нашу страницу Инстаграм">
+            <svg role="img" aria-label="Логотип Инстаграм" width="21" height="21" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h15c1.65 0 3 1.35 3 3v15c0
+                1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3Zm11 10.5C14 8.57 12.43 7 10.5 7S7 8.57 7
+                10.5 8.57 14 10.5 14s3.5-1.57 3.5-3.5ZM3 18V9h1.181c-.118.491-.18.995-.181 1.5a6.5 6.5 0 1 0 13 0
+                6.451 6.451 0 0 0-.181-1.5H18v9H3ZM14 7h4V3h-4v4Z" fill="#fff"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
 
-    <div class="social-discount">
-      <p class="social-discount__heading">Давайте дружить, это выгодно!</p>
-      <p class="social-discount__description">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="social-discount">
+        <p class="social-discount__heading">Давайте дружить, это выгодно!</p>
+        <p class="social-discount__description">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </div>
   </section>
 </footer>
+
+<section class="modal-message">
+  <button class="modal-message__close-button" type="button" aria-label="Закрыть"></button>
+  <h2 class="modal-message__heading">Напишите нам</h2>
+  <form class="modal-message__form" action="https://echo.htmlacademy.ru" method="post">
+    <p class="modal-message__item">
+      <label class="modal-message__label" for="modal-username">Ваше имя:</label>
+      <input class="modal-message__input" type="text" name="modal-username" id="modal-username"
+             placeholder="Имя Фамилия">
+    </p>
+    <p class="modal-message__item">
+      <label class="modal-message__label" for="modal-email">Ваш email:</label>
+      <input class="modal-message__input" type="email" name="modal-email" id="modal-email"
+             placeholder="email@example.com ">
+    </p>
+    <p class="modal-message__item modal-message__item_wide">
+      <label class="modal-message__label" for="modal-message">Текст письма:</label>
+      <textarea class="modal-message__textarea" name="modal-message" id="modal-message"
+                placeholder="В свободной форме"></textarea>
+    </p>
+
+    <button class="button modal-message__button" type="submit">Отправить</button>
+  </form>
+</section>
+
+<script src="js/popup.min.js"></script>
 </body>
 </html>
