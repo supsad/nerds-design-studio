@@ -26,7 +26,7 @@ const closePopupHandler = function (item) {
 
   item.classList.add('modal-message_close');
   setTimeout(closePopupAnim, 600);
-  setTimeout(closePopup, 600);
+  setTimeout(closePopup, 500);
 }
 
 try {
