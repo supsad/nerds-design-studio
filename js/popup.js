@@ -4,9 +4,9 @@ const popupOpenButton = document.querySelector('.address__button');
 const popupCloseButton = popupMessageUs.querySelector('.modal-message__close-button');
 
 const popupForm = popupMessageUs.querySelector('.modal-message__form');
-const popupUserName = popupMessageUs.querySelector('[name=popup-username]');
-const popupUserEmail = popupMessageUs.querySelector('[name=email]');
-const popupTextareaMessage = popupMessageUs.querySelector('[name=popup-message]');
+const popupUserName = popupMessageUs.querySelector('[name=modal-username]');
+const popupUserEmail = popupMessageUs.querySelector('[name=modal-email]');
+const popupTextareaMessage = popupMessageUs.querySelector('[name=modal-message]');
 
 let isPopupStorageSupport = true;
 let popupStorage = '';
@@ -30,8 +30,8 @@ const closePopupHandler = function (item) {
 }
 
 try {
-  popupStorage = localStorage.getItem('user-name');
-  popupStorage = localStorage.getItem('user-email');
+  popupNameStorage = localStorage.getItem('user-name');
+  popupEmailStorage = localStorage.getItem('user-email');
 } catch (err) {
   isPopupStorageSupport = false;
 }
@@ -40,12 +40,13 @@ popupOpenButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   popupMessageUs.classList.add('modal-message_show');
 
-  if (popupStorage) {
-    popupUserName.value = popupStorage;
+  if (popupNameStorage) {
+    popupUserName.value = popupNameStorage;
     popupUserEmail.focus();
-  } else if (popupStorage) {
-    popupUserEmail.value = popupStorage;
-    popupTextareaMessage.focus();
+    if (popupEmailStorage) {
+      popupUserEmail.value = popupEmailStorage;
+      popupTextareaMessage.focus();
+    }
   } else {
     popupUserName.focus();
   }
