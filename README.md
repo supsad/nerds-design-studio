@@ -19,16 +19,17 @@
 
 ## Realization
 
-    1. Modal windows in layouts.
-    2. The content area is centered and cannot be narrower than the layout width.
-    3. Backgrounds that rest against the edges of the layout should stretch for the entire page.
-    4. Carousel under the main navigation: slider.
-    5. Overflow is taken into account in layout
-    6. Block map: interactive map.
-    7. Correct form submission
-    8. Clicking on the "Contact us" link opens a modal window with a form
-    9. The feedback form is animated, closing with the esc button
-    10. Sliders carousel works without animation
+    1. HTML coding home page, shop page and stub page
+    2. Modal windows in layouts.
+    3. The content area is centered and cannot be narrower than the layout width.
+    4. Backgrounds that rest against the edges of the layout should stretch for the entire page.
+    5. Carousel under the main navigation: slider.
+    6. Overflow is taken into account in layout
+    7. Block map: interactive map.
+    8. Correct form submission
+    9. Clicking on the "Contact us" link opens a modal window with a form
+    10. The feedback form is animated, closing with the esc button
+    11. Sliders carousel works without animation
 
 ---
 
@@ -78,16 +79,17 @@
 
 ## Реализация
 
-    1. В макетах модальные окна.
-    2. Контентная область центрируется и не может быть уже макетной ширины. 
-    3. Фоны, которые упираются в края макета, должны тянуться на всю страницу.
-    4. Карусель под основной навигацией: слайдер.
-    5. В вёрстке учтено переполнение
-    6. Блок карты: интерактивная карта.
-    7. Верная отправка формы
-    8. При нажатии на ссылку "Напишите нам" открывается модальное окно с формой
-    9. Форма обратной связи анимирована, закрытие по кнопке esc
-    10. Работает карусель слайдеров без анимации
+    1. Свёрстаны главная страница, страница магазина и страница-заглушка.
+    2. В макетах модальные окна.
+    3. Контентная область центрируется и не может быть уже макетной ширины. 
+    4. Фоны, которые упираются в края макета, должны тянуться на всю страницу.
+    5. Карусель под основной навигацией: слайдер.
+    6. В вёрстке учтено переполнение
+    7. Блок карты: интерактивная карта.
+    8. Верная отправка формы
+    9. При нажатии на ссылку "Напишите нам" открывается модальное окно с формой
+    10. Форма обратной связи анимирована, закрытие по кнопке esc
+    11. Работает карусель слайдеров без анимации
 
 ---
 
